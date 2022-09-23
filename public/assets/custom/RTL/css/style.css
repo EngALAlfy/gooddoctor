@@ -1,0 +1,17 @@
+
+[class*=icheck-]>input:first-child+label::before {
+    margin-left: unset;
+    margin-right: -29px;
+}
+
+
+[class*=icheck-]>label {
+    padding-left: unset;
+    padding-right: 29px !important;
+}
+
+[class*=icheck-]>input:first-child:checked+input[type=hidden]+label::after,
+[class*=icheck-]>input:first-child:checked+label::after {
+    right: 15px !important;
+    left: auto !important;
+}

@@ -1,0 +1,3199 @@
+@font-face {
+  font-family: 'alalfy_health_icons';
+  src:  url('fonts/alalfy_health_icons.eot?xr317t');
+  src:  url('fonts/alalfy_health_icons.eot?xr317t#iefix') format('embedded-opentype'),
+    url('fonts/alalfy_health_icons.ttf?xr317t') format('truetype'),
+    url('fonts/alalfy_health_icons.woff?xr317t') format('woff'),
+    url('fonts/alalfy_health_icons.svg?xr317t#alalfy_health_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ahi-"], [class*=" ahi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'alalfy_health_icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ahi-x4:before {
+  content: "\e900";
+}
+.ahi-ambulance:before {
+  content: "\e901";
+}
+.ahi-basic_motorcycle:before {
+  content: "\e902";
+}
+.ahi-bike:before {
+  content: "\e903";
+}
+.ahi-cross_country_motorcycle:before {
+  content: "\e904";
+}
+.ahi-drone:before {
+  content: "\e905";
+}
+.ahi-helicopter:before {
+  content: "\e906";
+}
+.ahi-machinery:before {
+  content: "\e907";
+}
+.ahi-mobile_clinic:before {
+  content: "\e908";
+}
+.ahi-small_plane:before {
+  content: "\e909";
+}
+.ahi-vespa_motorcycle:before {
+  content: "\e90a";
+}
+.ahi-war:before {
+  content: "\e90b";
+}
+.ahi-uniE90C:before {
+  content: "\e90c";
+}
+.ahi-0:before {
+  content: "\e90d";
+}
+.ahi-1:before {
+  content: "\e90e";
+}
+.ahi-2:before {
+  content: "\e90f";
+}
+.ahi-3:before {
+  content: "\e910";
+}
+.ahi-4:before {
+  content: "\e911";
+}
+.ahi-5:before {
+  content: "\e912";
+}
+.ahi-6:before {
+  content: "\e913";
+}
+.ahi-7:before {
+  content: "\e914";
+}
+.ahi-8:before {
+  content: "\e915";
+}
+.ahi-9:before {
+  content: "\e916";
+}
+.ahi-A:before {
+  content: "\e917";
+}
+.ahi-B:before {
+  content: "\e918";
+}
+.ahi-C:before {
+  content: "\e919";
+}
+.ahi-D:before {
+  content: "\e91a";
+}
+.ahi-dollar:before {
+  content: "\e91b";
+}
+.ahi-E:before {
+  content: "\e91c";
+}
+.ahi-F:before {
+  content: "\e91d";
+}
+.ahi-G:before {
+  content: "\e91e";
+}
+.ahi-ghana:before {
+  content: "\e91f";
+}
+.ahi-H:before {
+  content: "\e920";
+}
+.ahi-I:before {
+  content: "\e921";
+}
+.ahi-J:before {
+  content: "\e922";
+}
+.ahi-K:before {
+  content: "\e923";
+}
+.ahi-L:before {
+  content: "\e924";
+}
+.ahi-M:before {
+  content: "\e925";
+}
+.ahi-N:before {
+  content: "\e926";
+}
+.ahi-O:before {
+  content: "\e927";
+}
+.ahi-P:before {
+  content: "\e928";
+}
+.ahi-Q:before {
+  content: "\e929";
+}
+.ahi-question_mark:before {
+  content: "\e92a";
+}
+.ahi-R:before {
+  content: "\e92b";
+}
+.ahi-rupee:before {
+  content: "\e92c";
+}
+.ahi-S:before {
+  content: "\e92d";
+}
+.ahi-T:before {
+  content: "\e92e";
+}
+.ahi-U:before {
+  content: "\e92f";
+}
+.ahi-V:before {
+  content: "\e930";
+}
+.ahi-W:before {
+  content: "\e931";
+}
+.ahi-X:before {
+  content: "\e932";
+}
+.ahi-Y:before {
+  content: "\e933";
+}
+.ahi-yen:before {
+  content: "\e934";
+}
+.ahi-Z:before {
+  content: "\e935";
+}
+.ahi-g:before {
+  content: "\e936";
+}
+.ahi-g1:before {
+  content: "\e937";
+}
+.ahi-alert:before {
+  content: "\e938";
+}
+.ahi-alert_circle:before {
+  content: "\e939";
+}
+.ahi-alert_triangle:before {
+  content: "\e93a";
+}
+.ahi-animal_chicken:before {
+  content: "\e93b";
+}
+.ahi-animal_cow:before {
+  content: "\e93c";
+}
+.ahi-animal_donkey:before {
+  content: "\e93d";
+}
+.ahi-animal_spider:before {
+  content: "\e93e";
+}
+.ahi-animal_tick:before {
+  content: "\e93f";
+}
+.ahi-assembly_point:before {
+  content: "\e940";
+}
+.ahi-award_ribbon:before {
+  content: "\e941";
+}
+.ahi-award_trophy:before {
+  content: "\e942";
+}
+.ahi-book:before {
+  content: "\e943";
+}
+.ahi-breeding_sites:before {
+  content: "\e944";
+}
+.ahi-calendar:before {
+  content: "\e945";
+}
+.ahi-calendar-quarantine .path1:before {
+  content: "\e946";
+  color: rgb(255, 255, 255);
+}
+.ahi-calendar-quarantine .path2:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path3:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path4:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path5:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path6:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path7:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path8:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path9:before {
+  content: "\e94e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path10:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path11:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path12:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path13:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path14:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path15:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path16:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path17:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path18:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path19:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path20:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path21:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-calendar-quarantine .path22:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-cannabis:before {
+  content: "\e95c";
+}
+.ahi-cardiogram:before {
+  content: "\e95d";
+}
+.ahi-cardiogram_e:before {
+  content: "\e95e";
+}
+.ahi-chart_bar:before {
+  content: "\e95f";
+}
+.ahi-chart_bar_stacked:before {
+  content: "\e960";
+}
+.ahi-chart_line:before {
+  content: "\e961";
+}
+.ahi-chart_line_stacked:before {
+  content: "\e962";
+}
+.ahi-chart_pie:before {
+  content: "\e963";
+}
+.ahi-chart-cured-decreasing .path1:before {
+  content: "\e964";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-cured-decreasing .path2:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-decreasing .path3:before {
+  content: "\e966";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-decreasing .path4:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-decreasing .path5:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-increasing .path1:before {
+  content: "\e969";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-cured-increasing .path2:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-increasing .path3:before {
+  content: "\e96b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-increasing .path4:before {
+  content: "\e96c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-cured-increasing .path5:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-decreasing .path1:before {
+  content: "\e96e";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-death-rate-decreasing .path2:before {
+  content: "\e96f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-decreasing .path3:before {
+  content: "\e970";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-decreasing .path4:before {
+  content: "\e971";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-decreasing .path5:before {
+  content: "\e972";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-decreasing .path6:before {
+  content: "\e973";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-decreasing .path7:before {
+  content: "\e974";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-increasing .path1:before {
+  content: "\e975";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-death-rate-increasing .path2:before {
+  content: "\e976";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-increasing .path3:before {
+  content: "\e977";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-increasing .path4:before {
+  content: "\e978";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-increasing .path5:before {
+  content: "\e979";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-increasing .path6:before {
+  content: "\e97a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-increasing .path7:before {
+  content: "\e97b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-stable .path1:before {
+  content: "\e97c";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-death-rate-stable .path2:before {
+  content: "\e97d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-stable .path3:before {
+  content: "\e97e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-stable .path4:before {
+  content: "\e97f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-stable .path5:before {
+  content: "\e980";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-stable .path6:before {
+  content: "\e981";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-death-rate-stable .path7:before {
+  content: "\e982";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path1:before {
+  content: "\e983";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-infected-decreasing .path2:before {
+  content: "\e984";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path3:before {
+  content: "\e985";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path4:before {
+  content: "\e986";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path5:before {
+  content: "\e987";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path6:before {
+  content: "\e988";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path7:before {
+  content: "\e989";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path8:before {
+  content: "\e98a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path9:before {
+  content: "\e98b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path10:before {
+  content: "\e98c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path11:before {
+  content: "\e98d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path12:before {
+  content: "\e98e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path13:before {
+  content: "\e98f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path14:before {
+  content: "\e990";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path15:before {
+  content: "\e991";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path16:before {
+  content: "\e992";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path17:before {
+  content: "\e993";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path18:before {
+  content: "\e994";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path19:before {
+  content: "\e995";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path20:before {
+  content: "\e996";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-decreasing .path21:before {
+  content: "\e997";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path1:before {
+  content: "\e998";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-infected-increasing .path2:before {
+  content: "\e999";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path3:before {
+  content: "\e99a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path4:before {
+  content: "\e99b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path5:before {
+  content: "\e99c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path6:before {
+  content: "\e99d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path7:before {
+  content: "\e99e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path8:before {
+  content: "\e99f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path9:before {
+  content: "\e9a0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path10:before {
+  content: "\e9a1";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path11:before {
+  content: "\e9a2";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path12:before {
+  content: "\e9a3";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path13:before {
+  content: "\e9a4";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path14:before {
+  content: "\e9a5";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path15:before {
+  content: "\e9a6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path16:before {
+  content: "\e9a7";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path17:before {
+  content: "\e9a8";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path18:before {
+  content: "\e9a9";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path19:before {
+  content: "\e9aa";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path20:before {
+  content: "\e9ab";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-increasing .path21:before {
+  content: "\e9ac";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path1:before {
+  content: "\e9ad";
+  color: rgb(255, 255, 255);
+}
+.ahi-chart-infected-stable .path2:before {
+  content: "\e9ae";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path3:before {
+  content: "\e9af";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path4:before {
+  content: "\e9b0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path5:before {
+  content: "\e9b1";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path6:before {
+  content: "\e9b2";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path7:before {
+  content: "\e9b3";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path8:before {
+  content: "\e9b4";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path9:before {
+  content: "\e9b5";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path10:before {
+  content: "\e9b6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path11:before {
+  content: "\e9b7";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path12:before {
+  content: "\e9b8";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path13:before {
+  content: "\e9b9";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path14:before {
+  content: "\e9ba";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path15:before {
+  content: "\e9bb";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path16:before {
+  content: "\e9bc";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path17:before {
+  content: "\e9bd";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path18:before {
+  content: "\e9be";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path19:before {
+  content: "\e9bf";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path20:before {
+  content: "\e9c0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-chart-infected-stable .path21:before {
+  content: "\e9c1";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-cholera:before {
+  content: "\e9c2";
+}
+.ahi-clinical_f:before {
+  content: "\e9c3";
+}
+.ahi-clinical_fe:before {
+  content: "\e9c4";
+}
+.ahi-communication:before {
+  content: "\e9c5";
+}
+.ahi-community_meeting:before {
+  content: "\e9c6";
+}
+.ahi-contact_support:before {
+  content: "\e9c7";
+}
+.ahi-database:before {
+  content: "\e9c8";
+}
+.ahi-death:before {
+  content: "\e9c9";
+}
+.ahi-death_alt:before {
+  content: "\e9ca";
+}
+.ahi-death_alt2:before {
+  content: "\e9cb";
+}
+.ahi-default:before {
+  content: "\e9cc";
+}
+.ahi-dhis2_logo:before {
+  content: "\e9cd";
+}
+.ahi-diabetes:before {
+  content: "\e9ce";
+}
+.ahi-diabetes_measure:before {
+  content: "\e9cf";
+}
+.ahi-discharge:before {
+  content: "\e9d0";
+}
+.ahi-eco_care:before {
+  content: "\e9d1";
+}
+.ahi-electricity:before {
+  content: "\e9d2";
+}
+.ahi-entry:before {
+  content: "\e9d3";
+}
+.ahi-excel_logo:before {
+  content: "\e9d4";
+}
+.ahi-exercise:before {
+  content: "\e9d5";
+}
+.ahi-fingerprint:before {
+  content: "\e9d6";
+}
+.ahi-geo_location:before {
+  content: "\e9d7";
+}
+.ahi-global-pandemic .path1:before {
+  content: "\e9d8";
+  color: rgb(255, 255, 255);
+}
+.ahi-global-pandemic .path2:before {
+  content: "\e9d9";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path3:before {
+  content: "\e9da";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path4:before {
+  content: "\e9db";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path5:before {
+  content: "\e9dc";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path6:before {
+  content: "\e9dd";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path7:before {
+  content: "\e9de";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path8:before {
+  content: "\e9df";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path9:before {
+  content: "\e9e0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path10:before {
+  content: "\e9e1";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path11:before {
+  content: "\e9e2";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path12:before {
+  content: "\e9e3";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path13:before {
+  content: "\e9e4";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path14:before {
+  content: "\e9e5";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path15:before {
+  content: "\e9e6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path16:before {
+  content: "\e9e7";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path17:before {
+  content: "\e9e8";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path18:before {
+  content: "\e9e9";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path19:before {
+  content: "\e9ea";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path20:before {
+  content: "\e9eb";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-global-pandemic .path21:before {
+  content: "\e9ec";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-globe .path1:before {
+  content: "\e9ed";
+  color: rgb(255, 255, 255);
+}
+.ahi-globe .path2:before {
+  content: "\e9ee";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-globe .path3:before {
+  content: "\e9ef";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-globe .path4:before {
+  content: "\e9f0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-globe .path5:before {
+  content: "\e9f1";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-guide_dog:before {
+  content: "\e9f2";
+}
+.ahi-hazardous:before {
+  content: "\e9f3";
+}
+.ahi-health:before {
+  content: "\e9f4";
+}
+.ahi-health_alt:before {
+  content: "\e9f5";
+}
+.ahi-health_data_security:before {
+  content: "\e9f6";
+}
+.ahi-health_data_sync:before {
+  content: "\e9f7";
+}
+.ahi-health_literacy:before {
+  content: "\e9f8";
+}
+.ahi-health_worker_form:before {
+  content: "\e9f9";
+}
+.ahi-heart:before {
+  content: "\e9fa";
+}
+.ahi-heart_cardiogram:before {
+  content: "\e9fb";
+}
+.ahi-high_bars:before {
+  content: "\e9fc";
+}
+.ahi-high_level:before {
+  content: "\e9fd";
+}
+.ahi-home-quarantine .path1:before {
+  content: "\e9fe";
+  color: rgb(255, 255, 255);
+}
+.ahi-home-quarantine .path2:before {
+  content: "\e9ff";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-home-quarantine .path3:before {
+  content: "\ea00";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-home-quarantine .path4:before {
+  content: "\ea01";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-hospital_symbol:before {
+  content: "\ea02";
+}
+.ahi-i_certificate_paper:before {
+  content: "\ea03";
+}
+.ahi-i_documents_accepted:before {
+  content: "\ea04";
+}
+.ahi-i_documents_denied:before {
+  content: "\ea05";
+}
+.ahi-i_exam_multiple_choice:before {
+  content: "\ea06";
+}
+.ahi-i_exam_qualification:before {
+  content: "\ea07";
+}
+.ahi-i_note_action:before {
+  content: "\ea08";
+}
+.ahi-i_schedule_school_date_time:before {
+  content: "\ea09";
+}
+.ahi-imm:before {
+  content: "\ea0a";
+}
+.ahi-info:before {
+  content: "\ea0b";
+}
+.ahi-insecticide_resistance:before {
+  content: "\ea0c";
+}
+.ahi-low_bars:before {
+  content: "\ea0d";
+}
+.ahi-low_level:before {
+  content: "\ea0e";
+}
+.ahi-magnifying_glass:before {
+  content: "\ea0f";
+}
+.ahi-malaria_outbreak:before {
+  content: "\ea10";
+}
+.ahi-medical_advice:before {
+  content: "\ea11";
+}
+.ahi-medium_bars:before {
+  content: "\ea12";
+}
+.ahi-medium_level:before {
+  content: "\ea13";
+}
+.ahi-megaphone:before {
+  content: "\ea14";
+}
+.ahi-mosquito:before {
+  content: "\ea15";
+}
+.ahi-negative:before {
+  content: "\ea16";
+}
+.ahi-network_4g:before {
+  content: "\ea17";
+}
+.ahi-network_5g:before {
+  content: "\ea18";
+}
+.ahi-no:before {
+  content: "\ea19";
+}
+.ahi-nutrition:before {
+  content: "\ea1a";
+}
+.ahi-openMRS_logo:before {
+  content: "\ea1b";
+}
+.ahi-outbreak:before {
+  content: "\ea1c";
+}
+.ahi-paved_road:before {
+  content: "\ea1d";
+}
+.ahi-paved_road_alt:before {
+  content: "\ea1e";
+}
+.ahi-peace:before {
+  content: "\ea1f";
+}
+.ahi-pharmacy:before {
+  content: "\ea20";
+}
+.ahi-pharmacy_alt:before {
+  content: "\ea21";
+}
+.ahi-poison:before {
+  content: "\ea22";
+}
+.ahi-polygon:before {
+  content: "\ea23";
+}
+.ahi-positive:before {
+  content: "\ea24";
+}
+.ahi-prescription_document:before {
+  content: "\ea25";
+}
+.ahi-provider_fst:before {
+  content: "\ea26";
+}
+.ahi-question:before {
+  content: "\ea27";
+}
+.ahi-question_circle:before {
+  content: "\ea28";
+}
+.ahi-question_triangle:before {
+  content: "\ea29";
+}
+.ahi-referral:before {
+  content: "\ea2a";
+}
+.ahi-register_book:before {
+  content: "\ea2b";
+}
+.ahi-running_water_alt:before {
+  content: "\ea2c";
+}
+.ahi-rx:before {
+  content: "\ea2d";
+}
+.ahi-sexual_reproductive_health:before {
+  content: "\ea2e";
+}
+.ahi-simple_logo:before {
+  content: "\ea2f";
+}
+.ahi-smoking:before {
+  content: "\ea30";
+}
+.ahi-smoking_cessation:before {
+  content: "\ea31";
+}
+.ahi-social_distancing:before {
+  content: "\ea32";
+}
+.ahi-social_distancing_alt .path1:before {
+  content: "\ea33";
+  color: rgb(255, 255, 255);
+}
+.ahi-social_distancing_alt .path2:before {
+  content: "\ea34";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-social_distancing_alt .path3:before {
+  content: "\ea35";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-social_distancing_alt .path4:before {
+  content: "\ea36";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-social_distancing_alt .path5:before {
+  content: "\ea37";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-social_distancing_alt .path6:before {
+  content: "\ea38";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-social_distancing_alt .path7:before {
+  content: "\ea39";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-social_distancing_alt .path8:before {
+  content: "\ea3a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-stop:before {
+  content: "\ea3b";
+}
+.ahi-tally:before {
+  content: "\ea3c";
+}
+.ahi-transgender:before {
+  content: "\ea3d";
+}
+.ahi-ui_folder:before {
+  content: "\ea3e";
+}
+.ahi-ui_folder_family:before {
+  content: "\ea3f";
+}
+.ahi-ui_menu:before {
+  content: "\ea40";
+}
+.ahi-ui_menu_grid:before {
+  content: "\ea41";
+}
+.ahi-ui_preferences:before {
+  content: "\ea42";
+}
+.ahi-ui_secure:before {
+  content: "\ea43";
+}
+.ahi-ui_settings:before {
+  content: "\ea44";
+}
+.ahi-ui_user_profile:before {
+  content: "\ea45";
+}
+.ahi-ui_zoom:before {
+  content: "\ea46";
+}
+.ahi-ui_zoom_in:before {
+  content: "\ea47";
+}
+.ahi-ui_zoom_out:before {
+  content: "\ea48";
+}
+.ahi-un_paved_road:before {
+  content: "\ea49";
+}
+.ahi-virus:before {
+  content: "\ea4a";
+}
+.ahi-virus_alt .path1:before {
+  content: "\ea4b";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus_alt .path2:before {
+  content: "\ea4c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path1:before {
+  content: "\ea4d";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus_patient .path2:before {
+  content: "\ea4e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path3:before {
+  content: "\ea4f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path4:before {
+  content: "\ea50";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path5:before {
+  content: "\ea51";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path6:before {
+  content: "\ea52";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path7:before {
+  content: "\ea53";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path8:before {
+  content: "\ea54";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path9:before {
+  content: "\ea55";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path10:before {
+  content: "\ea56";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path11:before {
+  content: "\ea57";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path12:before {
+  content: "\ea58";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path13:before {
+  content: "\ea59";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path14:before {
+  content: "\ea5a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path15:before {
+  content: "\ea5b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path16:before {
+  content: "\ea5c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path17:before {
+  content: "\ea5d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path18:before {
+  content: "\ea5e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path19:before {
+  content: "\ea5f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_patient .path20:before {
+  content: "\ea60";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_research_alt .path1:before {
+  content: "\ea61";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus_research_alt .path2:before {
+  content: "\ea62";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path1:before {
+  content: "\ea63";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus-mutation .path2:before {
+  content: "\ea64";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path3:before {
+  content: "\ea65";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path4:before {
+  content: "\ea66";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path5:before {
+  content: "\ea67";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path6:before {
+  content: "\ea68";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path7:before {
+  content: "\ea69";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path8:before {
+  content: "\ea6a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path9:before {
+  content: "\ea6b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path10:before {
+  content: "\ea6c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path11:before {
+  content: "\ea6d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path12:before {
+  content: "\ea6e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path13:before {
+  content: "\ea6f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path14:before {
+  content: "\ea70";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path15:before {
+  content: "\ea71";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path16:before {
+  content: "\ea72";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path17:before {
+  content: "\ea73";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path18:before {
+  content: "\ea74";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path19:before {
+  content: "\ea75";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path20:before {
+  content: "\ea76";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path21:before {
+  content: "\ea77";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path22:before {
+  content: "\ea78";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path23:before {
+  content: "\ea79";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path24:before {
+  content: "\ea7a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path25:before {
+  content: "\ea7b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path26:before {
+  content: "\ea7c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path27:before {
+  content: "\ea7d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path28:before {
+  content: "\ea7e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path29:before {
+  content: "\ea7f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path30:before {
+  content: "\ea80";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path31:before {
+  content: "\ea81";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path32:before {
+  content: "\ea82";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path33:before {
+  content: "\ea83";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path34:before {
+  content: "\ea84";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path35:before {
+  content: "\ea85";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path36:before {
+  content: "\ea86";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path37:before {
+  content: "\ea87";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path38:before {
+  content: "\ea88";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-mutation .path39:before {
+  content: "\ea89";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path1:before {
+  content: "\ea8a";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus-research .path2:before {
+  content: "\ea8b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path3:before {
+  content: "\ea8c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path4:before {
+  content: "\ea8d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path5:before {
+  content: "\ea8e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path6:before {
+  content: "\ea8f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path7:before {
+  content: "\ea90";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path8:before {
+  content: "\ea91";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path9:before {
+  content: "\ea92";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path10:before {
+  content: "\ea93";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path11:before {
+  content: "\ea94";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path12:before {
+  content: "\ea95";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path13:before {
+  content: "\ea96";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path14:before {
+  content: "\ea97";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-research .path15:before {
+  content: "\ea98";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path1:before {
+  content: "\ea99";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus-shield .path2:before {
+  content: "\ea9a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path3:before {
+  content: "\ea9b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path4:before {
+  content: "\ea9c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path5:before {
+  content: "\ea9d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path6:before {
+  content: "\ea9e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path7:before {
+  content: "\ea9f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path8:before {
+  content: "\eaa0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path9:before {
+  content: "\eaa1";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path10:before {
+  content: "\eaa2";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path11:before {
+  content: "\eaa3";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path12:before {
+  content: "\eaa4";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path13:before {
+  content: "\eaa5";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path14:before {
+  content: "\eaa6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path15:before {
+  content: "\eaa7";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path16:before {
+  content: "\eaa8";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path17:before {
+  content: "\eaa9";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path18:before {
+  content: "\eaaa";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-shield .path19:before {
+  content: "\eaab";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-water_treatment:before {
+  content: "\eaac";
+}
+.ahi-yes:before {
+  content: "\eaad";
+}
+.ahi-accident_and_emergency:before {
+  content: "\eaae";
+}
+.ahi-admissions:before {
+  content: "\eaaf";
+}
+.ahi-biochemistry_laboratory:before {
+  content: "\eab0";
+}
+.ahi-cardiology:before {
+  content: "\eab1";
+}
+.ahi-chaplaincy:before {
+  content: "\eab2";
+}
+.ahi-coronary_care_unit:before {
+  content: "\eab3";
+}
+.ahi-critical_care:before {
+  content: "\eab4";
+}
+.ahi-discharge_lounge:before {
+  content: "\eab5";
+}
+.ahi-ears_nose_and_throat:before {
+  content: "\eab6";
+}
+.ahi-endocrinology:before {
+  content: "\eab7";
+}
+.ahi-finance_dept:before {
+  content: "\eab8";
+}
+.ahi-gastroenterology:before {
+  content: "\eab9";
+}
+.ahi-geriatrics:before {
+  content: "\eaba";
+}
+.ahi-gym:before {
+  content: "\eabb";
+}
+.ahi-gynecology:before {
+  content: "\eabc";
+}
+.ahi-hematology:before {
+  content: "\eabd";
+}
+.ahi-hematology_laboratory:before {
+  content: "\eabe";
+}
+.ahi-hepatology:before {
+  content: "\eabf";
+}
+.ahi-human_resoruces:before {
+  content: "\eac0";
+}
+.ahi-intensive_care_unit:before {
+  content: "\eac1";
+}
+.ahi-medical_records:before {
+  content: "\eac2";
+}
+.ahi-nephrology:before {
+  content: "\eac3";
+}
+.ahi-obstetricsmonia:before {
+  content: "\eac4";
+}
+.ahi-oncology:before {
+  content: "\eac5";
+}
+.ahi-opthalmology:before {
+  content: "\eac6";
+}
+.ahi-orthopaedics:before {
+  content: "\eac7";
+}
+.ahi-outpatient_department:before {
+  content: "\eac8";
+}
+.ahi-pediatrics:before {
+  content: "\eac9";
+}
+.ahi-pharmacy1:before {
+  content: "\eaca";
+}
+.ahi-physical_therapy:before {
+  content: "\eacb";
+}
+.ahi-psychology:before {
+  content: "\eacc";
+}
+.ahi-radiology:before {
+  content: "\eacd";
+}
+.ahi-respirology:before {
+  content: "\eace";
+}
+.ahi-rheumatology:before {
+  content: "\eacf";
+}
+.ahi-social_work:before {
+  content: "\ead0";
+}
+.ahi-speech_language_therapy:before {
+  content: "\ead1";
+}
+.ahi-urology:before {
+  content: "\ead2";
+}
+.ahi-circle_large:before {
+  content: "\ead3";
+}
+.ahi-circle_medium:before {
+  content: "\ead4";
+}
+.ahi-circle_small:before {
+  content: "\ead5";
+}
+.ahi-information_campaign:before {
+  content: "\ead6";
+}
+.ahi-square_large:before {
+  content: "\ead7";
+}
+.ahi-square_medium:before {
+  content: "\ead8";
+}
+.ahi-square_small:before {
+  content: "\ead9";
+}
+.ahi-star_large:before {
+  content: "\eada";
+}
+.ahi-star_medium:before {
+  content: "\eadb";
+}
+.ahi-star_small:before {
+  content: "\eadc";
+}
+.ahi-triangle_large:before {
+  content: "\eadd";
+}
+.ahi-triangle_medium:before {
+  content: "\eade";
+}
+.ahi-triangle_small:before {
+  content: "\eadf";
+}
+.ahi-ambulatory_clinic:before {
+  content: "\eae0";
+}
+.ahi-church:before {
+  content: "\eae1";
+}
+.ahi-city:before {
+  content: "\eae2";
+}
+.ahi-emergency_post:before {
+  content: "\eae3";
+}
+.ahi-forest:before {
+  content: "\eae4";
+}
+.ahi-forest_persons:before {
+  content: "\eae5";
+}
+.ahi-home:before {
+  content: "\eae6";
+}
+.ahi-home_alt:before {
+  content: "\eae7";
+}
+.ahi-hospital:before {
+  content: "\eae8";
+}
+.ahi-letrina:before {
+  content: "\eae9";
+}
+.ahi-letrina_alt:before {
+  content: "\eaea";
+}
+.ahi-market_stall:before {
+  content: "\eaeb";
+}
+.ahi-ministry_of_health:before {
+  content: "\eaec";
+}
+.ahi-mosque:before {
+  content: "\eaed";
+}
+.ahi-palm_branches_roof:before {
+  content: "\eaee";
+}
+.ahi-proper_roof:before {
+  content: "\eaef";
+}
+.ahi-rural_post:before {
+  content: "\eaf0";
+}
+.ahi-rural_post_alt:before {
+  content: "\eaf1";
+}
+.ahi-temple:before {
+  content: "\eaf2";
+}
+.ahi-temple_alt:before {
+  content: "\eaf3";
+}
+.ahi-village:before {
+  content: "\eaf4";
+}
+.ahi-agriculture:before {
+  content: "\eaf5";
+}
+.ahi-agriculture_worker:before {
+  content: "\eaf6";
+}
+.ahi-agriculture_worker_alt:before {
+  content: "\eaf7";
+}
+.ahi-ancv:before {
+  content: "\eaf8";
+}
+.ahi-asthma:before {
+  content: "\eaf9";
+}
+.ahi-baby_0203_alt:before {
+  content: "\eafa";
+}
+.ahi-baby_0203m:before {
+  content: "\eafb";
+}
+.ahi-baby_0306m:before {
+  content: "\eafc";
+}
+.ahi-baby_female_0203m:before {
+  content: "\eafd";
+}
+.ahi-baby_female_0203m_alt:before {
+  content: "\eafe";
+}
+.ahi-baby_female_0306m:before {
+  content: "\eaff";
+}
+.ahi-baby_male_0203m:before {
+  content: "\eb00";
+}
+.ahi-baby_male_0203m_alt:before {
+  content: "\eb01";
+}
+.ahi-baby_male_0306m:before {
+  content: "\eb02";
+}
+.ahi-boy_0105y:before {
+  content: "\eb03";
+}
+.ahi-boy_1015y:before {
+  content: "\eb04";
+}
+.ahi-call_centre:before {
+  content: "\eb05";
+}
+.ahi-child_care:before {
+  content: "\eb06";
+}
+.ahi-child_cognition:before {
+  content: "\eb07";
+}
+.ahi-child_program:before {
+  content: "\eb08";
+}
+.ahi-city_worker:before {
+  content: "\eb09";
+}
+.ahi-clean_hands:before {
+  content: "\eb0a";
+}
+.ahi-community_healthworker:before {
+  content: "\eb0b";
+}
+.ahi-construction_worker:before {
+  content: "\eb0c";
+}
+.ahi-diabetes1:before {
+  content: "\eb0d";
+}
+.ahi-doctor:before {
+  content: "\eb0e";
+}
+.ahi-doctor_female:before {
+  content: "\eb0f";
+}
+.ahi-doctor_male:before {
+  content: "\eb10";
+}
+.ahi-domestic_worker:before {
+  content: "\eb11";
+}
+.ahi-domestic_worker_alt:before {
+  content: "\eb12";
+}
+.ahi-elderly:before {
+  content: "\eb13";
+}
+.ahi-exercise_running:before {
+  content: "\eb14";
+}
+.ahi-exercise_walk_supported:before {
+  content: "\eb15";
+}
+.ahi-exercise_walking:before {
+  content: "\eb16";
+}
+.ahi-exercise_weights:before {
+  content: "\eb17";
+}
+.ahi-factory_worker:before {
+  content: "\eb18";
+}
+.ahi-female_and_male:before {
+  content: "\eb19";
+}
+.ahi-female_sex_worker:before {
+  content: "\eb1a";
+}
+.ahi-fetus:before {
+  content: "\eb1b";
+}
+.ahi-forum:before {
+  content: "\eb1c";
+}
+.ahi-girl_0105y:before {
+  content: "\eb1d";
+}
+.ahi-girl_1015y:before {
+  content: "\eb1e";
+}
+.ahi-group_discussion_meeting:before {
+  content: "\eb1f";
+}
+.ahi-group_discussion_meetingx3:before {
+  content: "\eb20";
+}
+.ahi-health_worker:before {
+  content: "\eb21";
+}
+.ahi-i_groups_perspective_crowd:before {
+  content: "\eb22";
+}
+.ahi-i_training_class:before {
+  content: "\eb23";
+}
+.ahi-lactation:before {
+  content: "\eb24";
+}
+.ahi-male_and_female:before {
+  content: "\eb25";
+}
+.ahi-male_sex_worker:before {
+  content: "\eb26";
+}
+.ahi-man:before {
+  content: "\eb27";
+}
+.ahi-mental_disorders:before {
+  content: "\eb28";
+}
+.ahi-military_worker:before {
+  content: "\eb29";
+}
+.ahi-miner_worker:before {
+  content: "\eb2a";
+}
+.ahi-miner_worker_alt:before {
+  content: "\eb2b";
+}
+.ahi-msm:before {
+  content: "\eb2c";
+}
+.ahi-neuro_surgery:before {
+  content: "\eb2d";
+}
+.ahi-nurse:before {
+  content: "\eb2e";
+}
+.ahi-officer:before {
+  content: "\eb2f";
+}
+.ahi-old_man:before {
+  content: "\eb30";
+}
+.ahi-old_woman:before {
+  content: "\eb31";
+}
+.ahi-outpatient:before {
+  content: "\eb32";
+}
+.ahi-pediatric_surgery:before {
+  content: "\eb33";
+}
+.ahi-people:before {
+  content: "\eb34";
+}
+.ahi-person:before {
+  content: "\eb35";
+}
+.ahi-plantation_worker:before {
+  content: "\eb36";
+}
+.ahi-plantation_worker_alt:before {
+  content: "\eb37";
+}
+.ahi-pregnant:before {
+  content: "\eb38";
+}
+.ahi-pregnant_32w:before {
+  content: "\eb39";
+}
+.ahi-pregnant_0812w:before {
+  content: "\eb3a";
+}
+.ahi-pregnant_2426w:before {
+  content: "\eb3b";
+}
+.ahi-pregnant_3638w:before {
+  content: "\eb3c";
+}
+.ahi-prisoner:before {
+  content: "\eb3d";
+}
+.ahi-pwid:before {
+  content: "\eb3e";
+}
+.ahi-refused:before {
+  content: "\eb3f";
+}
+.ahi-rmnh:before {
+  content: "\eb40";
+}
+.ahi-security_worker:before {
+  content: "\eb41";
+}
+.ahi-speech_language_therapy1:before {
+  content: "\eb42";
+}
+.ahi-spraying:before {
+  content: "\eb43";
+}
+.ahi-symptom:before {
+  content: "\eb44";
+}
+.ahi-traumatism:before {
+  content: "\eb45";
+}
+.ahi-travel:before {
+  content: "\eb46";
+}
+.ahi-travel_alt:before {
+  content: "\eb47";
+}
+.ahi-truck_driver:before {
+  content: "\eb48";
+}
+.ahi-wash_hands:before {
+  content: "\eb49";
+}
+.ahi-water_sanitation:before {
+  content: "\eb4a";
+}
+.ahi-wold_care:before {
+  content: "\eb4b";
+}
+.ahi-woman:before {
+  content: "\eb4c";
+}
+.ahi-young_people:before {
+  content: "\eb4d";
+}
+.ahi-bandage_adhesive:before {
+  content: "\eb4e";
+}
+.ahi-bills:before {
+  content: "\eb4f";
+}
+.ahi-cleaning:before {
+  content: "\eb50";
+}
+.ahi-coins:before {
+  content: "\eb51";
+}
+.ahi-construction:before {
+  content: "\eb52";
+}
+.ahi-credit_card:before {
+  content: "\eb53";
+}
+.ahi-desktop_app:before {
+  content: "\eb54";
+}
+.ahi-hot_meal:before {
+  content: "\eb55";
+}
+.ahi-i_utensils:before {
+  content: "\eb56";
+}
+.ahi-justice:before {
+  content: "\eb57";
+}
+.ahi-money_bag:before {
+  content: "\eb58";
+}
+.ahi-phone:before {
+  content: "\eb59";
+}
+.ahi-rdt_result_out_stock:before {
+  content: "\eb5a";
+}
+.ahi-running_water:before {
+  content: "\eb5b";
+}
+.ahi-spreadsheets:before {
+  content: "\eb5c";
+}
+.ahi-stock_out:before {
+  content: "\eb5d";
+}
+.ahi-umbrella:before {
+  content: "\eb5e";
+}
+.ahi-unhealthy_food:before {
+  content: "\eb5f";
+}
+.ahi-blister_pills_oval_x1:before {
+  content: "\eb60";
+}
+.ahi-blister_pills_oval_x4:before {
+  content: "\eb61";
+}
+.ahi-blister_pills_oval_x14:before {
+  content: "\eb62";
+}
+.ahi-blister_pills_oval_x16:before {
+  content: "\eb63";
+}
+.ahi-blister_pills_round_x1:before {
+  content: "\eb64";
+}
+.ahi-blister_pills_round_x4:before {
+  content: "\eb65";
+}
+.ahi-blister_pills_round_x14:before {
+  content: "\eb66";
+}
+.ahi-blister_pills_round_x16:before {
+  content: "\eb67";
+}
+.ahi-medicines:before {
+  content: "\eb68";
+}
+.ahi-pill_1:before {
+  content: "\eb69";
+}
+.ahi-pills_2:before {
+  content: "\eb6a";
+}
+.ahi-pills_3:before {
+  content: "\eb6b";
+}
+.ahi-pills_4:before {
+  content: "\eb6c";
+}
+.ahi-contraceptive_diaphragm:before {
+  content: "\eb6d";
+}
+.ahi-contraceptive_injection:before {
+  content: "\eb6e";
+}
+.ahi-contraceptive_patch:before {
+  content: "\eb6f";
+}
+.ahi-contraceptive_voucher:before {
+  content: "\eb70";
+}
+.ahi-copper_iud:before {
+  content: "\eb71";
+}
+.ahi-family_planning:before {
+  content: "\eb72";
+}
+.ahi-female_condom:before {
+  content: "\eb73";
+}
+.ahi-hormonal_ring:before {
+  content: "\eb74";
+}
+.ahi-implant:before {
+  content: "\eb75";
+}
+.ahi-iud:before {
+  content: "\eb76";
+}
+.ahi-male_condom:before {
+  content: "\eb77";
+}
+.ahi-oral_contraception_pillsx21:before {
+  content: "\eb78";
+}
+.ahi-oral_contraception_pillsx28:before {
+  content: "\eb79";
+}
+.ahi-sayana_press:before {
+  content: "\eb7a";
+}
+.ahi-sperm:before {
+  content: "\eb7b";
+}
+.ahi-angry:before {
+  content: "\eb7c";
+}
+.ahi-bandaged:before {
+  content: "\eb7d";
+}
+.ahi-calm:before {
+  content: "\eb7e";
+}
+.ahi-confused:before {
+  content: "\eb7f";
+}
+.ahi-coughing:before {
+  content: "\eb80";
+}
+.ahi-crying:before {
+  content: "\eb81";
+}
+.ahi-dizzy:before {
+  content: "\eb82";
+}
+.ahi-expectorate:before {
+  content: "\eb83";
+}
+.ahi-eyeglasses:before {
+  content: "\eb84";
+}
+.ahi-fever:before {
+  content: "\eb85";
+}
+.ahi-happy:before {
+  content: "\eb86";
+}
+.ahi-loudly_crying:before {
+  content: "\eb87";
+}
+.ahi-masked:before {
+  content: "\eb88";
+}
+.ahi-measles:before {
+  content: "\eb89";
+}
+.ahi-nauseous:before {
+  content: "\eb8a";
+}
+.ahi-nervous:before {
+  content: "\eb8b";
+}
+.ahi-neutral:before {
+  content: "\eb8c";
+}
+.ahi-not_ok:before {
+  content: "\eb8d";
+}
+.ahi-ok:before {
+  content: "\eb8e";
+}
+.ahi-sad:before {
+  content: "\eb8f";
+}
+.ahi-sleepy:before {
+  content: "\eb90";
+}
+.ahi-sweating:before {
+  content: "\eb91";
+}
+.ahi-tongue:before {
+  content: "\eb92";
+}
+.ahi-vomitting:before {
+  content: "\eb93";
+}
+.ahi-woozy:before {
+  content: "\eb94";
+}
+.ahi-cone_test_on_nets:before {
+  content: "\eb95";
+}
+.ahi-cone_test_on_walls:before {
+  content: "\eb96";
+}
+.ahi-hiv_self_test:before {
+  content: "\eb97";
+}
+.ahi-intensity_concentration_bioassays:before {
+  content: "\eb98";
+}
+.ahi-malaria_microscope:before {
+  content: "\eb99";
+}
+.ahi-malaria_mixed_microscope:before {
+  content: "\eb9a";
+}
+.ahi-malaria_pf_microscope:before {
+  content: "\eb9b";
+}
+.ahi-malaria_pv_microscope:before {
+  content: "\eb9c";
+}
+.ahi-malaria_testing:before {
+  content: "\eb9d";
+}
+.ahi-mosquito_collection:before {
+  content: "\eb9e";
+}
+.ahi-rdt_result:before {
+  content: "\eb9f";
+}
+.ahi-rdt_result_invalid:before {
+  content: "\eba0";
+}
+.ahi-rdt_result_mixed:before {
+  content: "\eba1";
+}
+.ahi-rdt_result_mixed_invalid:before {
+  content: "\eba2";
+}
+.ahi-rdt_result_mixed_invalid_rectangular:before {
+  content: "\eba3";
+}
+.ahi-rdt_result_mixed_rectangular:before {
+  content: "\eba4";
+}
+.ahi-rdt_result_neg:before {
+  content: "\eba5";
+}
+.ahi-rdt_result_neg_invalid:before {
+  content: "\eba6";
+}
+.ahi-rdt_result_neg_invalid_rectangular:before {
+  content: "\eba7";
+}
+.ahi-rdt_result_neg_rectangular:before {
+  content: "\eba8";
+}
+.ahi-rdt_result_no_test:before {
+  content: "\eba9";
+}
+.ahi-rdt_result_pf:before {
+  content: "\ebaa";
+}
+.ahi-rdt_result_pf_invalid:before {
+  content: "\ebab";
+}
+.ahi-rdt_result_pf_invalid_rectangular:before {
+  content: "\ebac";
+}
+.ahi-rdt_result_pf_rectangular:before {
+  content: "\ebad";
+}
+.ahi-rdt_result_positive:before {
+  content: "\ebae";
+}
+.ahi-rdt_result_pv:before {
+  content: "\ebaf";
+}
+.ahi-rdt_result_pv_invalid:before {
+  content: "\ebb0";
+}
+.ahi-rdt_result_pv_invalid_rectangular:before {
+  content: "\ebb1";
+}
+.ahi-rdt_result_pv_rectangular:before {
+  content: "\ebb2";
+}
+.ahi-synergist_insecticide_bioassays:before {
+  content: "\ebb3";
+}
+.ahi-blood_pressure:before {
+  content: "\ebb4";
+}
+.ahi-blood_pressure_2:before {
+  content: "\ebb5";
+}
+.ahi-blood_pressure_monitor:before {
+  content: "\ebb6";
+}
+.ahi-cast:before {
+  content: "\ebb7";
+}
+.ahi-clinical_a:before {
+  content: "\ebb8";
+}
+.ahi-cold_chain:before {
+  content: "\ebb9";
+}
+.ahi-contact_lenses:before {
+  content: "\ebba";
+}
+.ahi-defibrilator:before {
+  content: "\ebbb";
+}
+.ahi-dental_hygiene .path1:before {
+  content: "\ebbc";
+  color: rgb(255, 255, 255);
+}
+.ahi-dental_hygiene .path2:before {
+  content: "\ebbd";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-dental_hygiene .path3:before {
+  content: "\ebbe";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-dental_hygiene .path4:before {
+  content: "\ebbf";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-discriminating_concentration_bioassays:before {
+  content: "\ebc0";
+}
+.ahi-disinfecting_wipes:before {
+  content: "\ebc1";
+}
+.ahi-fever1:before {
+  content: "\ebc2";
+}
+.ahi-hospitalized:before {
+  content: "\ebc3";
+}
+.ahi-inpatient:before {
+  content: "\ebc4";
+}
+.ahi-intravenous_bag:before {
+  content: "\ebc5";
+}
+.ahi-llin:before {
+  content: "\ebc6";
+}
+.ahi-microscope:before {
+  content: "\ebc7";
+}
+.ahi-mobile:before {
+  content: "\ebc8";
+}
+.ahi-observation:before {
+  content: "\ebc9";
+}
+.ahi-odontology:before {
+  content: "\ebca";
+}
+.ahi-odontology_implant:before {
+  content: "\ebcb";
+}
+.ahi-oxygen_tank:before {
+  content: "\ebcc";
+}
+.ahi-ppe_apron:before {
+  content: "\ebcd";
+}
+.ahi-ppe_face_mask:before {
+  content: "\ebce";
+}
+.ahi-ppe_face_shield:before {
+  content: "\ebcf";
+}
+.ahi-ppe_gloves:before {
+  content: "\ebd0";
+}
+.ahi-ppe_goggles:before {
+  content: "\ebd1";
+}
+.ahi-ppe_gown:before {
+  content: "\ebd2";
+}
+.ahi-ppe_mask_n95:before {
+  content: "\ebd3";
+}
+.ahi-ppe_sanitizer:before {
+  content: "\ebd4";
+}
+.ahi-ppe_santizer_alt .path1:before {
+  content: "\ebd5";
+  color: rgb(255, 255, 255);
+}
+.ahi-ppe_santizer_alt .path2:before {
+  content: "\ebd6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ppe_santizer_alt .path3:before {
+  content: "\ebd7";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ppe_santizer_alt .path4:before {
+  content: "\ebd8";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ppe_suit:before {
+  content: "\ebd9";
+}
+.ahi-ppe-face-shield-alt .path1:before {
+  content: "\ebda";
+  color: rgb(255, 255, 255);
+}
+.ahi-ppe-face-shield-alt .path2:before {
+  content: "\ebdb";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ppe-face-shield-alt .path3:before {
+  content: "\ebdc";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ppe-mask:before {
+  content: "\ebdd";
+}
+.ahi-respirator:before {
+  content: "\ebde";
+}
+.ahi-sling:before {
+  content: "\ebdf";
+}
+.ahi-stethoscope:before {
+  content: "\ebe0";
+}
+.ahi-surgical_sterilization:before {
+  content: "\ebe1";
+}
+.ahi-syringe:before {
+  content: "\ebe2";
+}
+.ahi-syringe-vaccine .path1:before {
+  content: "\ebe3";
+  color: rgb(255, 255, 255);
+}
+.ahi-syringe-vaccine .path2:before {
+  content: "\ebe4";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-syringe-vaccine .path3:before {
+  content: "\ebe5";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-syringe-vaccine .path4:before {
+  content: "\ebe6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-tac:before {
+  content: "\ebe7";
+}
+.ahi-thermometer:before {
+  content: "\ebe8";
+}
+.ahi-thermometer_digital:before {
+  content: "\ebe9";
+}
+.ahi-treated_water:before {
+  content: "\ebea";
+}
+.ahi-ventilator .path1:before {
+  content: "\ebeb";
+  color: rgb(255, 255, 255);
+}
+.ahi-ventilator .path2:before {
+  content: "\ebec";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ventilator .path3:before {
+  content: "\ebed";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ventilator .path4:before {
+  content: "\ebee";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ventilator .path5:before {
+  content: "\ebef";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ventilator .path6:before {
+  content: "\ebf0";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-ventilator_alt:before {
+  content: "\ebf1";
+}
+.ahi-virus_lab_research_syringe .path1:before {
+  content: "\ebf2";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus_lab_research_syringe .path2:before {
+  content: "\ebf3";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_lab_research_syringe .path3:before {
+  content: "\ebf4";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_lab_research_test_tube .path1:before {
+  content: "\ebf5";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus_lab_research_test_tube .path2:before {
+  content: "\ebf6";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus_lab_research_test_tube .path3:before {
+  content: "\ebf7";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-sanitizer-spray .path1:before {
+  content: "\ebf8";
+  color: rgb(255, 255, 255);
+}
+.ahi-virus-sanitizer-spray .path2:before {
+  content: "\ebf9";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-sanitizer-spray .path3:before {
+  content: "\ebfa";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-sanitizer-spray .path4:before {
+  content: "\ebfb";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-sanitizer-spray .path5:before {
+  content: "\ebfc";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-virus-sanitizer-spray .path6:before {
+  content: "\ebfd";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-weight:before {
+  content: "\ebfe";
+}
+.ahi-wheelchair .path1:before {
+  content: "\ebff";
+  color: rgb(255, 255, 255);
+}
+.ahi-wheelchair .path2:before {
+  content: "\ec00";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-wheelchair .path3:before {
+  content: "\ec01";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-wheelchair_alt:before {
+  content: "\ec02";
+}
+.ahi-xray:before {
+  content: "\ec03";
+}
+.ahi-allergies:before {
+  content: "\ec04";
+}
+.ahi-back_pain:before {
+  content: "\ec05";
+}
+.ahi-cervical_cancer:before {
+  content: "\ec06";
+}
+.ahi-chills:before {
+  content: "\ec07";
+}
+.ahi-chills_fever:before {
+  content: "\ec08";
+}
+.ahi-coughing_alt:before {
+  content: "\ec09";
+}
+.ahi-deaf:before {
+  content: "\ec0a";
+}
+.ahi-diarrhea:before {
+  content: "\ec0b";
+}
+.ahi-headache:before {
+  content: "\ec0c";
+}
+.ahi-hiv_ind:before {
+  content: "\ec0d";
+}
+.ahi-hiv_neg:before {
+  content: "\ec0e";
+}
+.ahi-hiv_pos:before {
+  content: "\ec0f";
+}
+.ahi-hpv:before {
+  content: "\ec10";
+}
+.ahi-intestinal-pain .path1:before {
+  content: "\ec11";
+  color: rgb(255, 255, 255);
+}
+.ahi-intestinal-pain .path2:before {
+  content: "\ec12";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-intestinal-pain .path3:before {
+  content: "\ec13";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-intestinal-pain .path4:before {
+  content: "\ec14";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-intestinal-pain .path5:before {
+  content: "\ec15";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-intestinal-pain .path6:before {
+  content: "\ec16";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path1:before {
+  content: "\ec17";
+  color: rgb(255, 255, 255);
+}
+.ahi-loss-smell .path2:before {
+  content: "\ec18";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path3:before {
+  content: "\ec19";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path4:before {
+  content: "\ec1a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path5:before {
+  content: "\ec1b";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path6:before {
+  content: "\ec1c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path7:before {
+  content: "\ec1d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path8:before {
+  content: "\ec1e";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path9:before {
+  content: "\ec1f";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-loss-smell .path10:before {
+  content: "\ec20";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-low_vision:before {
+  content: "\ec21";
+}
+.ahi-nausea:before {
+  content: "\ec22";
+}
+.ahi-overweight:before {
+  content: "\ec23";
+}
+.ahi-pneumonia:before {
+  content: "\ec24";
+}
+.ahi-ribbon:before {
+  content: "\ec25";
+}
+.ahi-sti:before {
+  content: "\ec26";
+}
+.ahi-sweating1:before {
+  content: "\ec27";
+}
+.ahi-tb:before {
+  content: "\ec28";
+}
+.ahi-underweight:before {
+  content: "\ec29";
+}
+.ahi-vih:before {
+  content: "\ec2a";
+}
+.ahi-viral_lung_infection .path1:before {
+  content: "\ec2b";
+  color: rgb(255, 255, 255);
+}
+.ahi-viral_lung_infection .path2:before {
+  content: "\ec2c";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-viral_lung_infection .path3:before {
+  content: "\ec2d";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-vomiting:before {
+  content: "\ec2e";
+}
+.ahi-arm:before {
+  content: "\ec2f";
+}
+.ahi-bacteria:before {
+  content: "\ec30";
+}
+.ahi-bladder:before {
+  content: "\ec31";
+}
+.ahi-blood_cells:before {
+  content: "\ec32";
+}
+.ahi-blood_drop:before {
+  content: "\ec33";
+}
+.ahi-body:before {
+  content: "\ec34";
+}
+.ahi-dna:before {
+  content: "\ec35";
+}
+.ahi-ear:before {
+  content: "\ec36";
+}
+.ahi-enzyme:before {
+  content: "\ec37";
+}
+.ahi-eye:before {
+  content: "\ec38";
+}
+.ahi-female_reproductive_system:before {
+  content: "\ec39";
+}
+.ahi-foot:before {
+  content: "\ec3a";
+}
+.ahi-gallbladder:before {
+  content: "\ec3b";
+}
+.ahi-heart1:before {
+  content: "\ec3c";
+}
+.ahi-joints:before {
+  content: "\ec3d";
+}
+.ahi-kidneys:before {
+  content: "\ec3e";
+}
+.ahi-leg:before {
+  content: "\ec3f";
+}
+.ahi-liver:before {
+  content: "\ec40";
+}
+.ahi-liver-alt .path1:before {
+  content: "\ec41";
+  color: rgb(255, 255, 255);
+}
+.ahi-liver-alt .path2:before {
+  content: "\ec42";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-lungs:before {
+  content: "\ec43";
+}
+.ahi-lymph_nodes:before {
+  content: "\ec44";
+}
+.ahi-mouth:before {
+  content: "\ec45";
+}
+.ahi-nerve:before {
+  content: "\ec46";
+}
+.ahi-neurology:before {
+  content: "\ec47";
+}
+.ahi-nose .path1:before {
+  content: "\ec48";
+  color: rgb(255, 255, 255);
+}
+.ahi-nose .path2:before {
+  content: "\ec49";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-nose .path3:before {
+  content: "\ec4a";
+  margin-left: -1em;
+  color: rgb(51, 51, 51);
+}
+.ahi-pancreas:before {
+  content: "\ec4b";
+}
+.ahi-skeleton:before {
+  content: "\ec4c";
+}
+.ahi-skull:before {
+  content: "\ec4d";
+}
+.ahi-spine:before {
+  content: "\ec4e";
+}
+.ahi-spleen:before {
+  content: "\ec4f";
+}
+.ahi-stomach:before {
+  content: "\ec50";
+}
+.ahi-tooth:before {
+  content: "\ec51";
+}
+.ahi-blood_a_n:before {
+  content: "\ec52";
+}
+.ahi-blood_a_p:before {
+  content: "\ec53";
+}
+.ahi-blood_ab_n:before {
+  content: "\ec54";
+}
+.ahi-blood_ab_p:before {
+  content: "\ec55";
+}
+.ahi-blood_b_n:before {
+  content: "\ec56";
+}
+.ahi-blood_b_p:before {
+  content: "\ec57";
+}
+.ahi-blood_bag:before {
+  content: "\ec58";
+}
+.ahi-blood_o_n:before {
+  content: "\ec59";
+}
+.ahi-blood_o_p:before {
+  content: "\ec5a";
+}
+.ahi-blood_rh_n:before {
+  content: "\ec5b";
+}
+.ahi-blood_rh_p:before {
+  content: "\ec5c";
+}

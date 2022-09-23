@@ -103,7 +103,8 @@ class Licensed
         // serial of the hard array
         if(is_array($hard_serial)){
             $hard_serial = array_diff($hard_serial , ["SerialNumber" , ""]);
-            if (!in_array($hard_info->hard_serial , $hard_serial)) {
+
+            if (!in_array($hard_info->hard_serial , array_values($hard_serial))) {
                 return redirect()->route('license')->with(['error' => 'hard_serial_not_equal']);
             }
         }else{
@@ -111,9 +112,7 @@ class Licensed
                 return redirect()->route('license')->with(['error' => 'hard_serial_not_equal']);
             }
         }
-        if ($hard_serial[1] != $hard_info->hard_serial) {
-            return redirect()->route('license')->with(['error' => 'hard_serial_not_equal']);
-        }
+
         if ($key != $hard_info->key) {
             return redirect()->route('license')->with(['error' => 'key_not_equal']);
         }

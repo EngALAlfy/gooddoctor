@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Disease;
 use App\Http\Requests\StoreDiseaseRequest;
 use App\Http\Requests\UpdateDiseaseRequest;
+use Illuminate\Http\Request;
 
 class DiseaseController extends Controller
 {
@@ -18,26 +19,7 @@ class DiseaseController extends Controller
         return view('diseases.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreDiseaseRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreDiseaseRequest $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -47,7 +29,7 @@ class DiseaseController extends Controller
      */
     public function show(Disease $disease)
     {
-        //
+        return view('diseases.show' , compact('disease'));
     }
 
     /**
@@ -64,11 +46,11 @@ class DiseaseController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDiseaseRequest  $request
+     * @param   $request
      * @param  \App\Models\Disease  $disease
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDiseaseRequest $request, Disease $disease)
+    public function update(Request $request, Disease $disease)
     {
         //
     }

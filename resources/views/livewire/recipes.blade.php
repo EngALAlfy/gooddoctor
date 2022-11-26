@@ -11,8 +11,7 @@
                 </div>
             </div>
 
-{{--
-            <div class="d-flex card-tools">
+            {{-- <div class="d-flex card-tools">
                 <button data-toggle="modal" data-target="#add-modal" type="button" class="btn btn-success"><i
                         class="fa fa-plus mr-2"></i> @lang('all.add')
                 </button>
@@ -22,96 +21,86 @@
         </div>
         <div class="card-body p-0">
 
-            @if($recipes == null || count($recipes) <= 0)
+            @if ($recipes == null || count($recipes) <= 0)
 
-            <div class="alert alert-info m-l-10 m-r-10">
-                <h5><i class="icon fas fa-info"></i> @lang('all.no_data')</h5>
-              </div>
-
-@else
-            <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 5%">
-                            #
-                        </th>
-                        <th style="width: 30%">
-                            @lang('all.name')
-                        </th>
-                        <th style="width: 10%">
-                            @lang('all.patient')
-                        </th>
-
-                        <th style="width: 10%">
-                            @lang('all.appointment')
-                        </th>
-                        <th style="width: 30%">
-                            @lang('all.actions')
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($recipes as $recipe)
+                <div class="alert alert-info m-l-10 m-r-10">
+                    <h5><i class="icon fas fa-info"></i> @lang('all.no_data')</h5>
+                </div>
+            @else
+                <table class="table table-striped projects">
+                    <thead>
                         <tr>
-                            <td>
-                                {{ $recipe->id }}
-                            </td>
-                            <td>
-                                <a>
-                                    @lang('all.recipe_num') #{{ $recipe->id }}
-                                </a>
-                            </td>
-                            <td>
-                                <a>
-                                    {{ $recipe->patient->name ?? '--' }}
-                                </a>
-                            </td>
+                            <th style="width: 15%">
+                                @lang('all.name')
+                            </th>
+                            <th style="width: 25%">
+                                @lang('all.patient')
+                            </th>
 
-                            <td>
-                                <a>
-                                    {{ $recipe->appointment->date }} - {{ $recipe->appointment->enter_time->format('H:m') ?? '--' }}
-                                </a>
-                            </td>
+                            <th style="width: 30%">
+                                @lang('all.appointment')
+                            </th>
+                            <th style="width: 30%">
+                                @lang('all.actions')
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($recipes as $recipe)
+                            <tr>
+                                <td>
+                                    <a href="{{route('recipes.show' , $recipe)}}">
+                                        @lang('all.recipe_num') #{{ $recipe->id }}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('patients.show',  $recipe->patient) }}">
+                                        {{ $recipe->patient->name ?? '--' }}
+                                    </a>
+                                </td>
 
-                            <td class="project-actions text-right">
-                                {{-- <a class="btn btn-primary btn-sm" href="#">
+                                <td>
+                                    <a href="{{ route('appointments.show',  $recipe->appointment) }}">
+                                         {{ $recipe->appointment->type->name }} -
+                                        {{ $recipe->appointment->date }}
+                                    </a>
+                                </td>
+
+                                <td class="project-actions text-right">
+                                    {{-- <a class="btn btn-primary btn-sm" href="#">
                                 <i class="fas fa-folder">
                                 </i>
                                 View
                             </a> --}}
-                                <a class="btn btn-info btn-sm">
-                                    <i class="fas fa-pencil-alt">
-                                    </i>
-                                    @lang('all.edit')
-                                </a>
-                                @if ($delete_dialog)
-                                    <button wire:click="deleteId({{ $recipe->id }})" data-target="#delete-modal"
-                                        data-toggle="modal" class="btn btn-danger btn-sm">
-                                        <i class="fas fa-trash">
-                                        </i>
-                                        @lang('all.delete')
-                                    </button>
-                                @else
-                                    @if ($deleteId == $recipe->id)
-                                        <button wire:click="delete" class="btn btn-warning btn-sm">
-                                            <i class="fas fa-check">
-                                            </i>
-                                            @lang('all.are_you_sure')
-                                        </button>
-                                    @else
-                                        <button wire:click="deleteId({{ $recipe->id }})"
-                                            class="btn btn-danger btn-sm">
+
+                                    @if ($delete_dialog)
+                                        <button wire:click="deleteId({{ $recipe->id }})" data-target="#delete-modal"
+                                            data-toggle="modal" class="btn btn-danger btn-sm">
                                             <i class="fas fa-trash">
                                             </i>
                                             @lang('all.delete')
                                         </button>
+                                    @else
+                                        @if ($deleteId == $recipe->id)
+                                            <button wire:click="delete" class="btn btn-warning btn-sm">
+                                                <i class="fas fa-check">
+                                                </i>
+                                                @lang('all.are_you_sure')
+                                            </button>
+                                        @else
+                                            <button wire:click="deleteId({{ $recipe->id }})"
+                                                class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                @lang('all.delete')
+                                            </button>
+                                        @endif
                                     @endif
-                                @endif
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             @endif
 
         </div>

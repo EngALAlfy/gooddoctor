@@ -3,6 +3,7 @@
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AppointmentTypeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BackupController;
 use App\Http\Controllers\DiseaseController;
 use App\Http\Controllers\DrugController;
 use App\Http\Controllers\HomeController;
@@ -15,6 +16,9 @@ use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Http\Helpers\Utils;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -29,11 +33,35 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 |
 */
 
+// Route::get('/test', function(){
+//     return response()->json($roles , 200 , [] , JSON_UNESCAPED_UNICODE);
+// });
+
 Route::get('/install', [InstallController::class, 'install'])->name('install');
 Route::get('/license', [InstallController::class, 'license'])->name('license');
 Route::post('/license/verify', [InstallController::class, 'verifyLicense'])->name('license.verify');
 Route::get('/license/get', [InstallController::class, 'getSerialCode'])->name('license.getSerialCode');
 Route::post('/license/make', [InstallController::class, 'makeSerialCodeLicense'])->name('license.makeSerialCodeLicense');
+
+Route::get('/cache/clear', function () {
+    $output = "";
+    Artisan::call('cache:clear');
+    $output .= Artisan::output();
+    Artisan::call('view:clear');
+    $output .= Artisan::output();
+    Artisan::call('route:clear');
+    $output .= Artisan::output();
+    Artisan::call('config:clear');
+    $output .= Artisan::output();
+
+    return view('cache.clear' , compact('output'));
+})->name("clear-cache");
+
+Route::resource('backup', BackupController::class)->except(['edit', 'update', 'store']);
+Route::get('/backup/restore/{name}', [BackupController::class, 'restore'])->name('backup.restore');
+
+Route::view('/help', 'home.help')->name('help');
+Route::view('/copyright', 'home.copyright')->name('copyright');
 
 
 Route::group(
@@ -42,10 +70,10 @@ Route::group(
         'middleware' => [
             // localization middlewares
             'localeSessionRedirect', 'localizationRedirect', 'localeViewPath',
-           // install check
-           'installed',
-           // licensed check
-           'licensed',
+            // install check
+            'installed',
+            // licensed check
+            //    'licensed',
             // share settings values middleware
             'settings',
 
@@ -54,27 +82,17 @@ Route::group(
     function () {
         Route::view('login', 'auth.login-v2')->name('login')->middleware('guest');
         Route::post('login', [AuthController::class, 'login'])->name('login')->middleware('guest');
+        Route::get('demo-login', [AuthController::class, 'demoLogin'])->name('demoLogin')->middleware('guest');
         Route::get('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
         Route::middleware('auth')->group(function () {
 
             Route::get('/home', [HomeController::class, 'index'])->name('home');
             Route::get('/', [HomeController::class, 'index']);
+            Route::get('/search', [HomeController::class, 'search'])->name('search');
 
-            Route::get('appointments', [AppointmentController::class, 'index'])->name('appointments.index');
-            Route::get('appointment-types', [AppointmentTypeController::class, 'index'])->name('appointment-types.index');
-            Route::get('drugs', [DrugController::class, 'index'])->name('drugs.index');
-            Route::get('rays', [RayController::class, 'index'])->name('rays.index');
-            Route::get('tests', [TestController::class, 'index'])->name('tests.index');
-            Route::get('recipes', [RecipeController::class, 'index'])->name('recipes.index');
-            Route::get('users', [UserController::class, 'index'])->name('users.index');
-            Route::get('patients', [PatientController::class, 'index'])->name('patients.index');
-            Route::get('diseases', [DiseaseController::class, 'index'])->name('diseases.index');
             Route::get('instructions', [InstructionsController::class, 'index'])->name('instructions.index');
 
-
-            Route::get('users/{user}', [UserController::class, 'show'])->name('users.show');
-            Route::get('patients/{patient}', [PatientController::class, 'show'])->name('patients.show');
 
             // appointments
             Route::get('appointments/today', [AppointmentController::class, 'today'])->name('appointments.today');
@@ -82,13 +100,29 @@ Route::group(
             Route::get('appointments/next', [AppointmentController::class, 'next'])->name('appointments.next');
             Route::get('appointments/exited', [AppointmentController::class, 'exited'])->name('appointments.exited');
             Route::get('appointments/current', [AppointmentController::class, 'current'])->name('appointments.current');
-            Route::get('appointments/{appointment}', [AppointmentController::class, 'show'])->name('appointments.show');
-
 
             // profile
             Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+            Route::post('profile/password/update', [ProfileController::class, 'updatePassword'])->name('profile.update-password');
+            Route::put('profile/update', [ProfileController::class, 'update'])->name('profile.update');
+            Route::delete('profile/delete', [ProfileController::class, 'destroy'])->name('profile.destroy');
             // settings
-            Route::get('settings', [SettingController::class, 'index'])->name('settings');
+            Route::get('/settings', [SettingController::class, 'index'])->name('settings');
+            Route::get('/settings/recipe-design', [SettingController::class, 'recipeDesign'])->name('settings.recipe-design');
+
+
+            // resources
+            Route::resource('users', UserController::class);
+            Route::put('users/{user}/update/roles', [UserController::class, 'updateRoles'])->name('users.update-roles');
+
+            Route::resource('patients', PatientController::class)->except(['create', 'store']);
+            Route::resource('diseases', DiseaseController::class)->except(['create', 'store']);
+            Route::resource('recipes', RecipeController::class)->only(['index', 'show', 'destroy']);
+            Route::resource('appointments', AppointmentController::class)->except(['create', 'store']);
+            Route::resource('appointment-types', AppointmentTypeController::class)->except(['create', 'store']);
+            Route::resource('drugs', DrugController::class)->except(['create', 'store']);
+            Route::resource('rays', RayController::class)->except(['create', 'store']);
+            Route::resource('tests', TestController::class)->except(['create', 'store']);
         });
     }
 );

@@ -29,7 +29,6 @@ class Patient extends Model
     function recipes()
     {
         return $this->hasManyThrough(Recipe::class, Appointment::class);
-
     }
 
     function history()
@@ -39,37 +38,58 @@ class Patient extends Model
 
     function rays()
     {
-        return $this->hasMany(Ray::class);
+        return $this->hasManyThrough(Ray::class, Appointment::class);
     }
 
     function tests()
     {
-        return $this->hasMany(Test::class);
+        return $this->hasManyThrough(Test::class, Appointment::class);
     }
 
     function appointments()
     {
-        return $this->hasMany(Appointment::class);
+        return $this->hasMany(Appointment::class)->latest();
     }
 
     function next_appointments()
     {
-        return $this->hasMany(Appointment::class)->whereDate('created_at' , '>' , Carbon::today());
+        return $this->hasMany(Appointment::class)->whereDate('created_at', '>', Carbon::today());
     }
 
     function today_appointments()
     {
-        return $this->hasMany(Appointment::class)->whereDate('created_at' , '=' , Carbon::today());
+        return $this->hasMany(Appointment::class)->whereDate('created_at', '=', Carbon::today());
     }
 
-    function previous_appointment()
+    function previous_appointments()
     {
-        return $this->hasMany(Appointment::class)->whereDate('created_at' , '<' , Carbon::today());
+        return $this->hasMany(Appointment::class)->whereDate('created_at', '<', Carbon::today());
     }
 
-    // function getDiseaseHistoryAttribute($value)
-    // {
-    //     return explode(',', $value);
-    // }
+    public function getSymptomsList()
+    {
+        $symptoms = "";
 
+        foreach ($this->appointments as $key => $value) {
+            if ($value->symptoms) {
+                $symptoms .= "\n";
+                $symptoms .= $value->symptoms;
+            }
+        }
+
+
+        if (!$symptoms || $symptoms == "" || empty($symptoms)) return null;
+        $array = explode("\n",  $symptoms);
+
+        $array = array_filter($array);
+        $array = array_unique($array);
+
+        $html = '';
+
+        foreach ($array as $key => $val) {
+            $html .= '<li>' . $val . '</li>';
+        }
+
+        return $html;
+    }
 }

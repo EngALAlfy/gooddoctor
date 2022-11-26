@@ -20,7 +20,11 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'photo',
+        'job',
+        'salary',
         'password',
+        'note',
     ];
 
     /**
@@ -41,4 +45,76 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function attachRole($role)
+    {
+        if($this->checkRole($role)){
+            return;
+        }
+
+        $roleModel = Role::where('name', $role)->first();
+
+        if (!isset($roleModel)) {
+            $roleModel = new Role;
+            $roleModel->name = $role;
+            $roleModel->save();
+        }
+
+
+        $this->roles()->attach([$roleModel->id]);
+    }
+
+    public function attachRoles(Array $roles)
+    {
+        foreach ($roles as $role) {
+            if($this->checkRole($role)){
+                return;
+            }
+
+            $roleModel = Role::where('name', $role)->first();
+
+            if (!isset($roleModel)) {
+                $roleModel = new Role;
+                $roleModel->name = $role;
+                $roleModel->save();
+            }
+
+            $this->roles()->attach([$roleModel->id]);
+        }
+    }
+
+    public function  checkRole ($role)
+    {
+        return $this->roles()->where('name' , $role)->exists();
+    }
+
+    public function  removeRole ($role)
+    {
+        $roleModel = Role::where('name', $role)->first();
+
+        return $this->roles()->detach($roleModel->id);
+    }
+
+    public function  removeRoles (...$roles)
+    {
+
+        foreach ($roles as $key => $role) {
+            $roleModel = Role::where('name', $role)->first();
+
+            $this->roles()->detach($roleModel->id);
+        }
+
+        return $this;
+    }
+
+    public function  removeAllRoles ()
+    {
+        return $this->roles()->detach();
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
 }

@@ -29,7 +29,7 @@ class CreateAppointment extends Component
         'info' => 'nullable|max:400',
         'appointment_type_id' => 'required',
         'symptoms' => 'required',
-        'date' => 'required|date',
+        'date' => 'nullable|date',
     ];
 
     protected $queryString = [
@@ -43,8 +43,14 @@ class CreateAppointment extends Component
 
         $data = $this->validate();
 
-        // format datetime
-        $date = new Carbon($data['date']);
+        // if null ---> today
+        if($data['date'] == null){
+            $date = Carbon::today();
+        }else{
+            // format datetime
+            $date = new Carbon($data['date']);
+        }
+
         $data['date'] = $date;
 
         $lastOrder = Appointment::whereDate('date' , $date)->orderBy('order' , 'desc')->first()->order ?? 0;

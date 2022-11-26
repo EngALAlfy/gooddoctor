@@ -47,7 +47,7 @@ class Rays extends Component
 
     public function render()
     {
-        return view('livewire.rays' , ['rays' => Ray::where('id' ,'LIKE', '%'.$this->search.'%')->orWhere('name', 'like', '%'.$this->search.'%')->orWhere('ar_name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
+        return view('livewire.rays' , ['rays' => Ray::withCount('appointments')->where('id' ,'LIKE', '%'.$this->search.'%')->orWhere('name', 'like', '%'.$this->search.'%')->orWhere('ar_name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
     }
 
     function deleteId($id){

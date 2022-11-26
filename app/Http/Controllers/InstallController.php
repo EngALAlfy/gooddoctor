@@ -16,30 +16,12 @@ class InstallController extends Controller
 
     function install()
     {
-        if ($this->createDB()) {
-            Artisan::call('migrate');
-            Artisan::call('db:seed');
 
-            return view('install.success');
-        }
 
-        return view('install.error');
+        return view('install.index');
     }
 
-    function createDB(): bool
-    {
-        $db_name = env('db_database', 'gooddoctor');
-
-        $charset = config('database.connection.mysql.charset', 'utf8mb4');
-        $collection = config('database.connection.mysql.collection', 'utf8mb4_unicode_ci');
-
-        $query = "CREATE DATABASE IF NOT EXISTS $db_name CHARACTER SET $charset COLLATE $collection;";
-
-        DB::connection('mysql_no_db')->statement($query);
-
-        return true;
-    }
-
+   
     function license()
     {
         $Wshshell = new COM('WScript.Shell', null, CP_UTF8);

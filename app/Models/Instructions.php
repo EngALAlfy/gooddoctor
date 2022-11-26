@@ -21,16 +21,6 @@ class Instructions extends Model
         return $this->hasMany(Appointment::class);
     }
 
-    function patientsCount(){
-        $patients = [];
-        $appointments = $this->hasMany(Appointment::class)->get();
-        foreach ($appointments as  $appointment) {
-            $patients[$appointment->patient->id] = $appointment->patient->name;
-        }
-
-        return count($patients);
-    }
-
     function user(){
         return $this->belongsTo(User::class);
     }

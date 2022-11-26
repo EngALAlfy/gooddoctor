@@ -74,8 +74,8 @@
                                 </td>
 
                                 <td>
-
-                                        {{ $instruction->patientsCount() }}
+                                        {{-- appointments count == patiens count (every appointment have only one patient) --}}
+                                        {{ $instruction->appointments_count }}
 
                                 </td>
 

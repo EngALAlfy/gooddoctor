@@ -2871,6 +2871,12 @@
     } else {
       left = offsets.left;
     }
+
+    if(document.dir == "rtl"){
+        left = -left;
+        sideB = "right";
+    }
+
     if (gpuAcceleration && prefixedProperty) {
       styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
       styles[sideA] = 0;

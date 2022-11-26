@@ -8,7 +8,6 @@ use Closure;
 use COM;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Crypt;
 
 class Licensed

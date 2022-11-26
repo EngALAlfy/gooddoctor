@@ -15,27 +15,6 @@ class Disease extends Model
         'user_id',
     ];
 
-    function appointmentPatientsCount()
-    {
-        $patients = [];
-        $appointments = $this->belongsToMany(Appointment::class)->get();
-        foreach ($appointments as  $appointment) {
-            $patients[$appointment->patient->id] = $appointment->patient->name;
-        }
-
-        return count($patients);
-    }
-
-    function appointmentPatients()
-    {
-        $patients = [];
-        $appointments = $this->belongsToMany(Appointment::class)->get();
-        foreach ($appointments as  $appointment) {
-            $patients[$appointment->patient->id] = $appointment->patient;
-        }
-
-        return $patients;
-    }
 
     function historyPatients()
     {

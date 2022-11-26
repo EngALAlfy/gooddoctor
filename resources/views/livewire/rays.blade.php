@@ -55,7 +55,7 @@
                                     {{ $ray->id }}
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{ route('rays.show', $ray) }}">
                                         {{ $ray->name }}
                                     </a>
                                 </td>
@@ -65,7 +65,9 @@
                                     </a>
                                 </td>
                                 <td>
-                                    {{ $ray->patientsCount() }}
+                                    {{-- appointments count == patiens count (every appointment have only one patient) --}}
+
+                                    {{ $ray->appointments_count }}
 
                                 </td>
 
@@ -75,7 +77,7 @@
                                 </i>
                                 View
                             </a> --}}
-                                    <a class="btn btn-info btn-sm">
+                                    <a href="{{ route('rays.edit', $ray) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         @lang('all.edit')

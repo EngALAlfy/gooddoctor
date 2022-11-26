@@ -13,7 +13,7 @@ class UpdatePatientRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->checkRole('create_patient');
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class UpdatePatientRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|min:3|max:200',
+            'sex' => 'required',
+            'age' => 'required',
+            'phone' => 'required|digits:11',
+            'address' => 'nullable|max:200',
+            'info' => 'nullable|max:400',
         ];
     }
 }

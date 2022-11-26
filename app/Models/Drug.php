@@ -16,7 +16,6 @@ class Drug extends Model
         'info',
     ];
 
-
     function recipes(){
         return $this->belongsToMany(Recipe::class);
     }

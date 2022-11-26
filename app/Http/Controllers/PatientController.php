@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Patient;
 use App\Http\Requests\StorePatientRequest;
 use App\Http\Requests\UpdatePatientRequest;
+use App\Models\Appointment;
+use App\Models\Disease;
+use App\Models\Ray;
+use App\Models\Test;
 
 class PatientController extends Controller
 {
@@ -18,26 +22,6 @@ class PatientController extends Controller
         return view('patients.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePatientRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StorePatientRequest $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -47,7 +31,26 @@ class PatientController extends Controller
      */
     public function show(Patient $patient)
     {
-        //
+
+        $patient->loadCount('appointments');
+        $patient->loadCount('next_appointments');
+        $patient->loadCount('today_appointments');
+        $patient->loadCount('previous_appointments');
+
+        $patient_appointments = Appointment::where('patient_id' , $patient->id)->get();
+        // $appointments = count($patient_appointments);
+        $appointments_ids = $patient_appointments->pluck('id')->toArray();
+         $tests = Test::whereHas('appointments' , function($query) use ($appointments_ids){
+             $query->whereIn('appointments.id' , $appointments_ids);
+         })->count();
+        $rays = Ray::whereHas('appointments' , function($query) use ($appointments_ids){
+            $query->whereIn('appointments.id' , $appointments_ids);
+        })->count();
+        $diseases = Disease::whereHas('appointments' , function($query) use ($appointments_ids){
+            $query->whereIn('appointments.id' , $appointments_ids);
+        })->count();
+
+        return view('patients.show' , compact('patient' , 'rays' ,'tests' ,'diseases'));
     }
 
     /**
@@ -58,7 +61,7 @@ class PatientController extends Controller
      */
     public function edit(Patient $patient)
     {
-        //
+        return view('patients.edit' , compact('patient'));
     }
 
     /**
@@ -70,7 +73,13 @@ class PatientController extends Controller
      */
     public function update(UpdatePatientRequest $request, Patient $patient)
     {
-        //
+        $data = $request->validated();
+
+        $patient->update($data);
+
+        $this->success();
+
+        return redirect()->route('patients.index');
     }
 
     /**
@@ -81,6 +90,9 @@ class PatientController extends Controller
      */
     public function destroy(Patient $patient)
     {
-        //
+        $patient->delete();
+
+        $this->success();
+        return redirect()->route('patients.index');
     }
 }

@@ -33,19 +33,19 @@
                             <th style="width: 5%">
                                 #
                             </th>
-                            <th style="width: 25%">
+                            <th style="width: 30%">
                                 @lang('all.patient')
                             </th>
                             <th style="width: 10%">
                                 @lang('all.order')
                             </th>
-                            <th style="width: 15%">
+                            <th style="width: 20%">
                                 @lang('all.date')
                             </th>
                             <th style="width: 15%">
                                 @lang('all.appointment_type')
                             </th>
-                            <th style="width: 30%">
+                            <th style="width: 20%">
                                 @lang('all.actions')
                             </th>
                         </tr>
@@ -54,18 +54,21 @@
                         @foreach ($appointments as $appointment)
                             <tr>
                                 <td>
-                                    {{ $appointment->id }}
+                                    <a href="{{route('appointments.show' , $appointment)}}">#{{ $appointment->id }}</a>
                                 </td>
                                 <td>
-                                    {{ $appointment->patient->name }}
 
+                                    <a href="{{ route('patients.show', $appointment->patient) }}">
+
+                                    {{ $appointment->patient->name }}
+                                    </a>
                                 </td>
                                 <td>
                                     <span class="badge badge-success p-2" style="font-size: 16px">
                                         {{ $appointment->order }}</span>
                                 </td>
                                 <td>
-                                    {{ $appointment->date }}
+                                    <a href="{{route('appointments.show' , $appointment)}}">{{ $appointment->date }}</a>
                                 </td>
                                 <td>
                                     <small class="badge badge-warning"><i

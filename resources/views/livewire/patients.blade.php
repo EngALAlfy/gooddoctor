@@ -58,7 +58,7 @@
                                     {{ $patient->id }}
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{ route('patients.show', $patient) }}">
                                         {{ $patient->name }}
                                     </a>
                                 </td>
@@ -84,7 +84,7 @@
                                 </i>
                                 View
                             </a> --}}
-                                    <a class="btn btn-info btn-sm">
+                                    <a href="{{ route('patients.edit', $patient) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         @lang('all.edit')

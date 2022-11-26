@@ -50,7 +50,7 @@ class Tests extends Component
 
     public function render()
     {
-        return view('livewire.tests' , ['tests' => Test::where('id' ,'LIKE', '%'.$this->search .'%')->orWhere('name', 'like', '%'.$this->search.'%')->orWhere('ar_name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
+        return view('livewire.tests' , ['tests' => Test::withCount('appointments')->where('id' ,'LIKE', '%'.$this->search .'%')->orWhere('name', 'like', '%'.$this->search.'%')->orWhere('ar_name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
     }
 
     function deleteId($id){

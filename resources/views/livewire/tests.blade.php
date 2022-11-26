@@ -54,7 +54,7 @@
                                     {{ $test->id }}
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{route('tests.show' , $test)}}">
                                         {{ $test->name }}
                                     </a>
                                 </td>
@@ -64,8 +64,9 @@
                                     </a>
                                 </td>
                                 <td>
+                                        {{-- appointments count == patiens count (every appointment have only one patient) --}}
 
-                                        {{ $test->patientscount() }}
+                                        {{ $test->appointments_count }}
 
                                 </td>
 
@@ -75,7 +76,7 @@
                                 </i>
                                 View
                             </a> --}}
-                                    <a class="btn btn-info btn-sm">
+                                    <a href="{{route('tests.edit' , $test)}}" class="btn btn-info btn-sm">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         @lang('all.edit')

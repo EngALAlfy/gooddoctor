@@ -46,7 +46,7 @@ class Instructions extends Component
 
     public function render()
     {
-        return view('livewire.instructions' , ['instructions' => ModelsInstructions::where('id' ,'like', '%'. $this->search . '%')->orWhere('name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
+        return view('livewire.instructions' , ['instructions' => ModelsInstructions::withCount('appointments')->where('id' ,'like', '%'. $this->search . '%')->orWhere('name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
     }
 
     function deleteId($id){

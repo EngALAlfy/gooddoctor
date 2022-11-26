@@ -48,7 +48,7 @@ class Diseases extends Component
 
     public function render()
     {
-        return view('livewire.diseases' , ['diseases' => Disease::withCount('historyPatients')->where('id' ,'like', '%'. $this->search . '%')->orWhere('name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
+        return view('livewire.diseases' , ['diseases' => Disease::withCount('historyPatients')->withCount('appointments')->where('id' ,'like', '%'. $this->search . '%')->orWhere('name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
     }
 
     function deleteId($id){

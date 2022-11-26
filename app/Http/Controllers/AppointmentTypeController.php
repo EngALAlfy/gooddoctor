@@ -18,26 +18,6 @@ class AppointmentTypeController extends Controller
         return view('appointment-types.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreAppointmentTypeRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreAppointmentTypeRequest $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -47,7 +27,7 @@ class AppointmentTypeController extends Controller
      */
     public function show(AppointmentType $appointmentType)
     {
-        //
+        return view('appointment-types.show' , compact('appointmentType'));
     }
 
     /**

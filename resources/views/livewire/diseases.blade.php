@@ -51,14 +51,15 @@
                                     {{ $disease->id }}
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{ route('diseases.show', $disease) }}">
                                         {{ $disease->name }}
                                     </a>
                                 </td>
 
                                 <td>
 
-                                        {{ $disease->appointmentPatientsCount() + $disease->historyPatients_count }}
+                                    {{-- appointments count == patiens count (every appointment have only one patient) --}}
+                                    {{ $disease->appointments_count + $disease->historyPatients_count }}
 
                                 </td>
 
@@ -68,7 +69,7 @@
                                 </i>
                                 View
                             </a> --}}
-                                    <a class="btn btn-info btn-sm">
+                                    <a href="{{ route('diseases.edit', $disease) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         @lang('all.edit')

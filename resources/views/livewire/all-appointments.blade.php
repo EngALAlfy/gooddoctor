@@ -13,8 +13,8 @@
 
 
             <div class="d-flex card-tools">
-                <button data-toggle="modal" data-target="#add-appointment-modal" type="button" class="btn btn-success"><i
-                        class="fa fa-plus mr-2"></i> @lang('all.add')
+                <button data-toggle="modal" data-target="#add-appointment-modal" type="button"
+                    class="btn btn-success"><i class="fa fa-plus mr-2"></i> @lang('all.add')
                 </button>
 
             </div>
@@ -37,7 +37,7 @@
                             <th style="width: 5%">
                                 @lang('all.order')
                             </th>
-                            <th style="width: 10%">
+                            <th style="width: 20%">
                                 @lang('all.date')
                             </th>
                             <th style="width: 15%">
@@ -46,7 +46,7 @@
                             <th style="width: 15%">
                                 @lang('all.status')
                             </th>
-                            <th style="width: 30%">
+                            <th style="width: 20%">
                                 @lang('all.actions')
                             </th>
                         </tr>
@@ -55,10 +55,13 @@
                         @foreach ($appointments as $appointment)
                             <tr>
                                 <td>
-                                    {{ $appointment->id }}
+                                    <a
+                                        href="{{ route('appointments.show', $appointment) }}">#{{ $appointment->id }}</a>
                                 </td>
                                 <td>
-                                    {{ $appointment->patient->name }}
+                                    <a href="{{ route('patients.show', $appointment->patient) }}">
+                                        {{ $appointment->patient->name }}
+                                    </a>
 
                                 </td>
                                 <td>
@@ -66,15 +69,18 @@
                                         {{ $appointment->order }}</span>
                                 </td>
                                 <td>
-                                    {{ $appointment->date }}
+                                    <a
+                                        href="{{ route('appointments.show', $appointment) }}">{{ $appointment->date }}</a>
                                 </td>
                                 <td>
-                                    <small class="badge badge-warning"><i
-                                            class="far fa-clock mr-1"></i>{{ $appointment->type->name }}</small>
+                                    <a href="{{ route('appointment-types.show', $appointment->type) }}"><small
+                                            class="badge badge-warning"><i
+                                                class="far fa-clock mr-1"></i>{{ $appointment->type->name }}</small></a>
                                 </td>
                                 <td>
-                                    <small class="badge @if($appointment->status == 'hold') badge-info @elseif ($appointment->status == 'entered') badge-success @elseif ($appointment->status == 'exited') badge-warning @elseif($appointment->status == 'cancelled') badge-danger @endif "><i
-                                            class="far fa-clock mr-1"></i>{{ __('all.'.$appointment->status) }}</small>
+                                    <small
+                                        class="badge @if ($appointment->status == 'hold') badge-info @elseif ($appointment->status == 'entered') badge-success @elseif ($appointment->status == 'exited') badge-warning @elseif($appointment->status == 'cancelled') badge-danger @endif "><i
+                                            class="far fa-clock mr-1"></i>{{ __('all.' . $appointment->status) }}</small>
                                 </td>
 
 
@@ -146,8 +152,12 @@
 
     @push('scripts')
         <script>
-            Livewire.on('stored', () => {
+            Livewire.on('appointment_stored', () => {
                 $('#add-appointment-modal').modal('hide');
+            });
+
+            Livewire.on('patient_stored', () => {
+                $('#add-patient-modal').modal('hide');
             });
         </script>
     @endpush

@@ -56,7 +56,7 @@
                                     {{ $appointment_type->id }}
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{route('appointment-types.show' , $appointment_type)}}">
                                         {{ $appointment_type->name }}
                                     </a>
                                 </td>

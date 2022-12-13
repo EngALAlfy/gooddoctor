@@ -36,7 +36,7 @@
         </script>
         {{-- @endpush --}}
 
-        <div class="alert alert-info alert-dismissible">
+        <div class="alert alert-default-info alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
             <h5><i class="icon fas fa-info"></i>@lang('all.info')</h5>
             {!! session('info') !!}
@@ -50,7 +50,7 @@
         </script>
         {{-- @endpush --}}
 
-        <div class="m-t-10 sufee-alert alert with-close alert-danger alert-dismissible fade show">
+        <div class="m-t-10 sufee-alert alert with-close alert-default-danger alert-dismissible fade show">
             <span class="badge badge-pill badge-danger">@lang('all.error')</span>
             <i class="icon fas fa-ban"></i>
             {{ session('error') }}
@@ -61,7 +61,7 @@
     @endif
 
     @if ($errors->any())
-        <div class="m-t-10 sufee-alert alert with-close alert-danger alert-dismissible fade show">
+        <div class="m-t-10 sufee-alert alert with-close alert-default-danger alert-dismissible fade show">
             <span class="badge badge-pill badge-danger">@lang('all.error')</span>
             <i class="icon fas fa-ban"></i>
             <ul class="list-unstyled">

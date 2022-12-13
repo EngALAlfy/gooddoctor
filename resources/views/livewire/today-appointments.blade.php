@@ -76,22 +76,25 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body row text-right">
-                        <div class="col-md-3"><b>@lang('all.patient_name') :</b> {{ $current_appointment->patient->name }}
+                        <div class="col-md-3"><b>@lang('all.patient_name') :</b>
+                            <a href="{{ route('patients.show', $current_appointment->patient) }}">
+                                {{ $current_appointment->patient->name }}
+                            </a>
                         </div>
-                        <div class="col-md-3"><b>@lang('all.appointment_type') :</b>  {{ $current_appointment->type->name }}</div>
-                        <div class="col-md-3"><b>@lang('all.price') :</b>  {{ $current_appointment->type->price }}</div>
-                        <div class="col-md-3"><b>@lang('all.age') :</b>  {{ $current_appointment->patient->age }}</div>
+                        <div class="col-md-3"><b>@lang('all.appointment_type') :</b> {{ $current_appointment->type->name }}</div>
+                        <div class="col-md-3"><b>@lang('all.price') :</b> {{ $current_appointment->type->price }}</div>
+                        <div class="col-md-3"><b>@lang('all.age') :</b> {{ $current_appointment->patient->age }}</div>
                         <div class="col-md-12 border-top m-t-20 m-b-20"></div>
                         <div class="col-md-6 row">
                             <div class="col-md-4"><b>@lang('all.symptoms') :</b> </div>
                             <div class="col-md-8">
                                 <ul>
-                                    {!! $current_appointment->symptoms !!}
+                                    {!! $current_appointment->getSymptomsList() !!}
                                 </ul>
                             </div>
                         </div>
                         <div class="col-md-6 row">
-                            <div class="col-md-6"><b>@lang('all.info') :</b>  </div>
+                            <div class="col-md-6"><b>@lang('all.info') :</b> </div>
                             <div class="col-md-6">{!! $current_appointment->info !!}</div>
                         </div>
                     </div>
@@ -154,8 +157,9 @@
                                 <i class="fas fa-ellipsis-v"></i>
                             </span>
 
-                            <span class="badge badge-success p-2"
-                                style="font-size: 16px">{{ $appointment->order }}</span>
+                            <a href="{{ route('appointments.show', $appointment) }}" class="badge badge-success p-2"
+                                style="font-size: 16px">
+                                {{ $appointment->order }}</a>
 
                             <div class="icheck-primary d-inline ml-2">
                                 <input
@@ -164,9 +168,13 @@
                                     id="todoCheck-{{ $appointment->id }}">
                                 <label for="todoCheck-{{ $appointment->id }}"></label>
                             </div>
-                            <span class="text">{{ $appointment->patient->name }}</span>
-                            <span class="badge badge-warning"><i
-                                    class="far fa-clock mr-1"></i>{{ $appointment->type->name }}</span>
+                            <a href="{{ route('patients.show', $appointment->patient) }}" class="text">
+
+                                {{ $appointment->patient->name }}</a>
+                            <a href="{{ route('appointment-types.show', $appointment->type) }}"
+                                class="badge badge-warning">
+                                <i class="far fa-clock mr-1"></i>{{ $appointment->type->name }}
+                            </a>
                             <div class="tools">
                                 <i class="fas fa-edit"></i>
                                 <i class="fas fa-trash-o"></i>
@@ -204,8 +212,12 @@
 
     @push('scripts')
         <script>
-            Livewire.on('stored', () => {
+            Livewire.on('appointment_stored', () => {
                 $('#add-appointment-modal').modal('hide');
+            });
+
+            Livewire.on('patient_stored', () => {
+                $('#add-patient-modal').modal('hide');
             });
         </script>
     @endpush

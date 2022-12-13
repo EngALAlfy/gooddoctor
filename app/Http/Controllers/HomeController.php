@@ -11,4 +11,8 @@ class HomeController extends Controller
     function index(){
         return view('home.index');
     }
+
+    function search(Request $request){
+        return view('home.search');
+    }
 }

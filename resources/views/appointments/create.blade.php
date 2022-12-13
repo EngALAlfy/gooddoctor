@@ -15,7 +15,7 @@
                             placeholder="@lang('all.search') @lang('all.patient')">
 
                         <div class="input-group-append">
-                            <button data-toggle="modal" data-target="#add-modal" type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                            <button data-toggle="modal" data-target="#add-patient-modal" type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
                         </div>
                     </div>
                     <select size="5" class="custom-select @error('patient_id') is-invalid @enderror"

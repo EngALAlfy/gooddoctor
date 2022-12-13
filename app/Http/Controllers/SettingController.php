@@ -18,6 +18,11 @@ class SettingController extends Controller
         return view('settings.index');
     }
 
+    public function recipeDesign()
+    {
+        return view('settings.recipe-design');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

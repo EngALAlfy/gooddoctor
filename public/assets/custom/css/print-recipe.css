@@ -1,0 +1,35 @@
+
+
+@page{
+    size: A5;
+    /* width: 148mm; */
+    /* height: 210mm; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* break-after: always; */
+    /* page-break-after: always; */
+    /* -webkit-break-after: always; */
+}
+
+html{
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+body{
+    direction: rtl;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+.recipe-design-item {
+    border: none !important;
+}
+
+#recipe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}

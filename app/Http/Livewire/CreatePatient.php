@@ -19,6 +19,8 @@ class CreatePatient extends Component
     public $phone;
     public $address;
 
+    protected $listeners = ['patient_stored' => '$refresh'];
+
 
     protected $rules = [
         'name' => 'required|min:3|max:200',
@@ -44,7 +46,7 @@ class CreatePatient extends Component
         Patient::create($data);
 
         // $this->emitTo(Tests::class , 'stored');
-        $this->emit('stored');
+        $this->emit('patient_stored');
         $this->name = null;
         $this->ar_name = null;
     }

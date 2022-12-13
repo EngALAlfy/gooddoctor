@@ -40,26 +40,6 @@ class AppointmentController extends Controller
         return view('appointments.current');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreAppointmentRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreAppointmentRequest $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -69,7 +49,7 @@ class AppointmentController extends Controller
      */
     public function show(Appointment $appointment)
     {
-        //
+        return view('appointments.show' , compact('appointment'));
     }
 
     /**

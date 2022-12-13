@@ -14,7 +14,7 @@
                       onerror="this.src='{{ asset('assets/img/user.png') }}'" alt="{{ auth()->user()->name }}"  class="img-circle elevation-2">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{auth()->user()->name}}</a>
+                <a href="{{route('profile')}}" class="d-block">{{auth()->user()->name}}</a>
             </div>
         </div>
 
@@ -160,6 +160,20 @@
                 </p>
                 </a>
                 <ul class="nav nav-treeview">
+
+                    <li class="nav-item">
+                        <a href="{{route('users.index')}}" @class(["nav-link" , "active" => Route::currentRouteName()== 'users.index'])>
+                        <i class="nav-icon fa fa-users"></i>
+                        <p class="text">@lang('all.users')</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{route('users.create')}}" @class(["nav-link" , "active" => Route::currentRouteName()== 'users.create'])>
+                        <i class="nav-icon fa fa-plus"></i>
+                        <p class="text">@lang('all.add')</p>
+                        </a>
+                    </li>
 
                 </ul>
                 </li>

@@ -17,33 +17,12 @@ class Ray extends Model
     ];
 
 
-    function patientsCount()
-    {
-        $patients = [];
-        $appointments = $this->belongsToMany(Appointment::class)->get();
-        foreach ($appointments as  $appointment) {
-            $patients[$appointment->patient->id] = $appointment->patient->name;
-        }
-
-        return count($patients);
-    }
-
-    function patients()
-    {
-        $patients = [];
-        $appointments = $this->belongsToMany(Appointment::class)->get();
-        foreach ($appointments as  $appointment) {
-            $patients[$appointment->patient->id] = $appointment->patient;
-        }
-
-        return $patients;
-    }
 
     function appointments()
     {
         return $this->belongsToMany(Appointment::class);
     }
-    
+
     function user(){
         return $this->hasOne(User::class);
     }

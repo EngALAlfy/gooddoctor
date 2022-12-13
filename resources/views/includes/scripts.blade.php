@@ -5,7 +5,7 @@
     $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('assets/adminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/adminLTE/plugins/bootstrap/js/bootstrap.bundle.js') }}"></script>
 <!-- daterangepicker -->
 <script src="{{ asset('assets/adminLTE/plugins/moment/moment.min.js') }}"></script>
 <script src="{{ asset('assets/adminLTE/plugins/moment/locale/ar.js') }}"></script>
@@ -13,7 +13,10 @@
 <script src="{{ asset('assets/adminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('assets/adminLTE/js/adminlte.js') }}"></script>
+<!-- audio -->
 <script src="{{ asset('assets/custom/js/howler/howler.min.js') }}"></script>
+<!-- intro help tour -->
+<script src="{{ asset('assets/custom/js/intro.js/intro.js') }}"></script>
 @livewireScripts
 
 <script>
@@ -26,7 +29,7 @@
     toastr.options.positionClass = "toast-bottom-left";
     toastr.options.progressBar = true;
     toastr.options.onHidden  = function() {
-        // remove old toastr - bug
+        // remove old toastr - bug for livewire
         $('#notification_script').remove();
     };
     toastr.options.onShown = function() {
@@ -39,9 +42,11 @@
     };
     // time now in footer
     $(function() {
+        $('#time').html(moment(new Date()).format("h:m  dddd D-M-Y "));
+
         setInterval(function() {
-            $('#time').html(moment(new Date()).format("h:m:s - (dddd) d-M (MMMM) , Y "));
-        }, 1000);
+            $('#time').html(moment(new Date()).format("h:m  dddd D-M-Y "));
+        }, 60 * 1000);
 
     });
 
@@ -73,7 +78,15 @@
         $('nav.navbar').addClass('navbar-white')
     @endif
 
+    // hint icon
+    $('.hint').each(function(){
+        var hint = $(this).data('hint');
+        $(this).append('<button data-placement="auto"  data-toggle="tooltip" title="'+hint+'" class="btn hint-btn"><i class="fa fa-info-circle text-info"></i></button>');
+    });
+
+    // tooltip
     $('[data-toggle="tooltip"]').tooltip();
+
 </script>
 
 @stack('scripts')

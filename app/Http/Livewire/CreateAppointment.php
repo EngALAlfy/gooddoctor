@@ -22,14 +22,14 @@ class CreateAppointment extends Component
 
     public $patient_name;
 
-    protected $listeners = ['stored' => '$refresh'];
+    protected $listeners = ['appointment_stored' => '$refresh' , 'patient_stored' => '$refresh'];
 
     protected $rules = [
         'patient_id' => 'required',
         'info' => 'nullable|max:400',
         'appointment_type_id' => 'required',
         'symptoms' => 'required',
-        'date' => 'required|date',
+        'date' => 'nullable|date',
     ];
 
     protected $queryString = [
@@ -43,8 +43,14 @@ class CreateAppointment extends Component
 
         $data = $this->validate();
 
-        // format datetime
-        $date = new Carbon($data['date']);
+        // if null ---> today
+        if($data['date'] == null){
+            $date = Carbon::today();
+        }else{
+            // format datetime
+            $date = new Carbon($data['date']);
+        }
+
         $data['date'] = $date;
 
         $lastOrder = Appointment::whereDate('date' , $date)->orderBy('order' , 'desc')->first()->order ?? 0;
@@ -56,7 +62,7 @@ class CreateAppointment extends Component
         $appointment = Appointment::create($data);
 
         // $this->emitTo(Tests::class , 'stored');
-        $this->emit('stored' , $appointment->id);
+        $this->emit('appointment_stored' , $appointment->id);
         $this->patient_id = null;
         $this->symptoms = null;
         $this->appointment_type_id = null;

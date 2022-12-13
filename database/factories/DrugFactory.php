@@ -16,7 +16,6 @@ class DrugFactory extends Factory
     {
         return [
             'user_id' => User::where('email' , 'admin')->first()->id,
-
         ];
     }
 }

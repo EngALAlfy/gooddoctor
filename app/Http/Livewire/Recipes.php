@@ -47,7 +47,7 @@ class Recipes extends Component
 
     public function render()
     {
-        return view('livewire.recipes' , ['recipes' => Recipe::with('patient' , 'appointment')->where('id',  $this->search)->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
+        return view('livewire.recipes' , ['recipes' => Recipe::where('id', 'LIKE' , "%$this->search%")->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
     }
 
     function deleteId($id){

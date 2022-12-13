@@ -15,7 +15,7 @@ class CreateRecipesTable extends Migration
     {
         Schema::create('recipes', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Appointment::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(\App\Models\Appointment::class)->unique()->constrained()->cascadeOnDelete();
             $table->foreignIdFor(\App\Models\User::class)->nullable()->constrained()->nullOnDelete();
             $table->string('info' , 400)->nullable();
             $table->timestamps();

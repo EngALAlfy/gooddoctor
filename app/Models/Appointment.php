@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use function PHPUnit\Framework\returnSelf;
+
 class Appointment extends Model
 {
     use HasFactory;
@@ -26,12 +28,12 @@ class Appointment extends Model
 
     public function type()
     {
-        return $this->belongsTo(AppointmentType::class , 'appointment_type_id' , 'id');
+        return $this->belongsTo(AppointmentType::class, 'appointment_type_id', 'id');
     }
 
     public function instructions()
     {
-        return $this->belongsToMany(Instructions::class);
+        return $this->belongsTo(Instructions::class);
     }
 
     public function tests()
@@ -41,7 +43,7 @@ class Appointment extends Model
 
     public function diseases()
     {
-        return $this->belongsToMany(Disease::class)->withPivot(['treatment_method' , 'diagnosis' ,'symptoms' , 'info']);
+        return $this->belongsToMany(Disease::class)->withPivot(['treatment_method', 'diagnosis', 'symptoms', 'info']);
     }
 
     public function rays()
@@ -49,9 +51,9 @@ class Appointment extends Model
         return $this->belongsToMany(Ray::class);
     }
 
-    public function recipes()
+    public function recipe()
     {
-        return $this->belongsToMany(Recipe::class);
+        return $this->hasOne(Recipe::class);
     }
 
     public function user()
@@ -64,16 +66,17 @@ class Appointment extends Model
         return $this->belongsTo(Patient::class);
     }
 
-    public function getSymptomsAttribute($value)
+    public function getSymptomsList()
     {
-        $array = explode("\n" ,  $value);
+        $value = $this->symptoms;
+        if ($value == null) return $value;
+        $array = explode("\n",  $value);
         $html = '';
 
         foreach ($array as $key => $val) {
-            $html .= '<li>'.$val.'</li>';
+            $html .= '<li>' . $val . '</li>';
         }
 
         return $html;
     }
-
 }

@@ -16054,12 +16054,12 @@ body.text-sm .control-sidebar {
   border-color: #dee2e6 transparent #dee2e6 #dee2e6;
 }
 
-.nav-tabs.flex-column.nav-tabs-left {
-  border-right: 1px solid #dee2e6;
-  border-left: 0;
+.nav-tabs.flex-column.nav-tabs-right {
+  border-left: 1px solid #dee2e6;
+  border-right: 0;
 }
 
-.nav-tabs.flex-column.nav-tabs-left .nav-link {
+.nav-tabs.flex-column.nav-tabs-right .nav-link {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0.25rem;
   border-top-right-radius: 0;
@@ -16067,12 +16067,12 @@ body.text-sm .control-sidebar {
   margin-right: -1px;
 }
 
-.nav-tabs.flex-column.nav-tabs-left .nav-link:hover, .nav-tabs.flex-column.nav-tabs-left .nav-link:focus {
+.nav-tabs.flex-column.nav-tabs-right .nav-link:hover, .nav-tabs.flex-column.nav-tabs-right .nav-link:focus {
   border-color: #e9ecef #e9ecef #e9ecef transparent;
 }
 
-.nav-tabs.flex-column.nav-tabs-left .nav-link.active,
-.nav-tabs.flex-column.nav-tabs-left .nav-item.show .nav-link {
+.nav-tabs.flex-column.nav-tabs-right .nav-link.active,
+.nav-tabs.flex-column.nav-tabs-right .nav-item.show .nav-link {
   border-color: #dee2e6 #dee2e6 #dee2e6 transparent;
 }
 
@@ -18958,11 +18958,11 @@ body.text-sm .control-sidebar {
   background-color: #3f474e;
 }
 
-.dark-mode .nav-tabs.flex-column.nav-tabs-left {
+.dark-mode .nav-tabs.flex-column.nav-tabs-right {
   border-color: #56606a;
 }
 
-.dark-mode .nav-tabs.flex-column.nav-tabs-left .nav-link.active, .dark-mode .nav-tabs.flex-column.nav-tabs-left .nav-link:focus, .dark-mode .nav-tabs.flex-column.nav-tabs-left .nav-link:hover {
+.dark-mode .nav-tabs.flex-column.nav-tabs-right .nav-link.active, .dark-mode .nav-tabs.flex-column.nav-tabs-right .nav-link:focus, .dark-mode .nav-tabs.flex-column.nav-tabs-right .nav-link:hover {
   border-color: #56606a #56606a #56606a transparent;
 }
 
@@ -33304,9 +33304,9 @@ html.maximized-card {
 }
 
 .alert-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #d32535;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
 .alert-default-danger {

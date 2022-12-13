@@ -32,7 +32,7 @@ class TodayAppointments extends Component
     public $delete_dialog;
 
 
-    protected $listeners = ['stored'];
+    protected $listeners = ['appointment_stored' , 'patient_stored' => '$refresh'];
 
     protected $queryString = [
         'search' => ['except' => ''],
@@ -42,7 +42,7 @@ class TodayAppointments extends Component
     ];
 
 
-    public function stored($appointment_id)
+    public function appointment_stored($appointment_id)
     {
         $this->success();
 

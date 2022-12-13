@@ -2,8 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdatePasswordRequest;
+use App\Http\Requests\UpdateProfileRequest;
+use App\Models\Appointment;
+use App\Models\Patient;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -14,17 +22,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $today_appointments_count = Appointment::where('user_id', Auth::id())->whereDate('created_at', Carbon::today())->count();
+        $today_patients_count = Patient::where('user_id', Auth::id())->whereDate('created_at', Carbon::today())->count();
+        $all_appointments_count = Appointment::where('user_id', Auth::id())->count();
+        $all_patients_count = Patient::where('user_id', Auth::id())->count();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return view('profile.index', compact('today_patients_count', 'today_appointments_count', 'all_appointments_count', 'all_patients_count'));
     }
 
     /**
@@ -38,48 +41,42 @@ class ProfileController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
+    public function updatePassword(UpdatePasswordRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        if (Hash::check($data["old_password"], Auth::user()->password)) {
+            Auth::user()->password = Hash::make($data["password"]);
+            Auth::user()->save();
+            $this->success();
+            return back();
+        }
+
+        $this->error("all.wrong_old_password");
+        return back();
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user)
+    public function update(UpdateProfileRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        Auth::user()->update($data);
+        Auth::user()->save();
+
+        $this->success();
+        return back();
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, User $user)
+    public function destroy()
     {
-        //
-    }
+        // if (Auth::user()->email == "admin") {
+        //     $this->error("all.cannot_delete_the_main_admin");
+        //     return back();
+        // }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(User $user)
-    {
-        //
+
+        User::find(Auth::id())->delete();
+        $this->success("all.account_deleted_successfully");
+        return redirect()->route('logout');
     }
 }

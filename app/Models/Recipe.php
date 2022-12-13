@@ -16,11 +16,11 @@ class Recipe extends Model
     ];
 
     function appointment(){
-        return $this->hasOne(Appointment::class);
+        return $this->belongsTo(Appointment::class);
     }
 
-    function patinet(){
-        return $this->hasOneThrough(patinet::class,Appointment::class);
+    function patient(){
+        return $this->hasOneThrough(Patient::class,Appointment::class , 'id' , 'id' , 'appointment_id' , 'patient_id');
 
     }
     function user(){
@@ -28,6 +28,6 @@ class Recipe extends Model
 
     }
     function drugs(){
-        return $this->belongsToMany(Drug::class);
+        return $this->belongsToMany(Drug::class)->withPivot(['amount' , 'info' , 'repeat_every_hours']);
     }
 }

@@ -48,7 +48,7 @@ class Drugs extends Component
 
     public function render()
     {
-        return view('livewire.drugs' , ['drugs' => Drug::where('id' , $this->search)->orWhere('name', 'like', '%'.$this->search.'%')->orWhere('ar_name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
+        return view('livewire.drugs' , ['drugs' => Drug::withCount('recipes')->where('id' , 'LIKE' ,"%$this->search%")->orWhere('name', 'like', '%'.$this->search.'%')->orWhere('ar_name', 'like', '%'.$this->search.'%')->orderBy($this->orderBy , $this->order)->paginate($this->perPage)]);
     }
 
     function deleteId($id){

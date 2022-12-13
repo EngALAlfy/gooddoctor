@@ -4,13 +4,21 @@ namespace App\Http\Helpers;
 
 use Illuminate\Support\Facades\Auth;
 
-Trait Funcs {
+trait Funcs
+{
 
-    function success($msg = 'all.done_successfully'){
+    function success($msg = 'all.done_successfully')
+    {
         session()->flash('success', __($msg));
     }
 
-    function error($msg = 'all.not_done_successfully'){
+    function info($msg)
+    {
+        session()->flash('info', $msg);
+    }
+
+    function error($msg = 'all.not_done_successfully')
+    {
         session()->flash('error', __($msg));
     }
 

@@ -25,7 +25,7 @@ class Patients extends Component
     public $delete_dialog;
 
 
-    protected $listeners = ['stored'];
+    protected $listeners = ['patient_stored'];
 
     protected $queryString = [
         'search' => ['except' => ''],
@@ -35,7 +35,7 @@ class Patients extends Component
     ];
 
 
-    public function stored(){
+    public function patient_stored(){
         $this->success();
         //$this->render();
     }

@@ -36,11 +36,13 @@
                             <th style="width: 30%">
                                 @lang('all.name')
                             </th>
-                            <th style="width: 30%">
+                            <th style="width: 25%">
                                 @lang('all.ar_name')
                             </th>
-
-                            <th style="width: 30%">
+                            <th style="width: 15%">
+                                @lang('all.patients_count')
+                            </th>
+                            <th style="width: 20%">
                                 @lang('all.actions')
                             </th>
                         </tr>
@@ -52,14 +54,20 @@
                                     {{ $drug->id }}
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{ route('drugs.show', $drug) }}">
                                         {{ $drug->name }}
                                     </a>
                                 </td>
                                 <td>
-                                    <a>
+                                    <a href="{{ route('drugs.show', $drug) }}">
                                         {{ $drug->ar_name }}
                                     </a>
+                                </td>
+
+                                <td>
+                                    {{-- appointments count == recipes count == patiens count --}}
+                                    {{-- (every appointment have only one patient and only one recipe) --}}
+                                    {{ $drug->recipes_count }}
                                 </td>
 
 
@@ -69,7 +77,7 @@
                                 </i>
                                 View
                             </a> --}}
-                                    <a class="btn btn-info btn-sm">
+                                    <a href="{{ route('drugs.edit', $drug) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         @lang('all.edit')

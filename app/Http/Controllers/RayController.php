@@ -19,68 +19,16 @@ class RayController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StoreRayRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreRayRequest $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  \App\Models\Ray  $ray
-     * @return \Illuminate\Http\Response
      */
     public function show(Ray $ray)
     {
-        //
+        return view('rays.show' , compact('ray'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Ray  $ray
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Ray $ray)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateRayRequest  $request
-     * @param  \App\Models\Ray  $ray
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateRayRequest $request, Ray $ray)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Ray  $ray
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Ray $ray)
-    {
-        //
-    }
+
 }

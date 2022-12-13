@@ -1,4 +1,4 @@
-<div wire:ignore.self class="modal fade" id="add-modal" tabindex="-1" role="dialog">
+<div wire:ignore.self class="modal fade" id="add-patient-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <form wire:submit.prevent="store">
             <div class="modal-content">

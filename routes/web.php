@@ -104,6 +104,7 @@ Route::group(
             Route::get('appointments/next', [AppointmentController::class, 'next'])->name('appointments.next');
             Route::get('appointments/exited', [AppointmentController::class, 'exited'])->name('appointments.exited');
             Route::get('appointments/current', [AppointmentController::class, 'current'])->name('appointments.current');
+            Route::get('appointments/date/{date}', [AppointmentController::class, 'date'])->name('appointments.date');
 
             // profile
             Route::get('profile', [ProfileController::class, 'index'])->name('profile');
@@ -127,6 +128,9 @@ Route::group(
             Route::resource('drugs', DrugController::class)->except(['create', 'store']);
             Route::resource('rays', RayController::class)->except(['create', 'store']);
             Route::resource('tests', TestController::class)->except(['create', 'store']);
+
+            Route::get("/print/{appointment}/{printable}" , [AppointmentController::class , "print"])->name("print");
+
         });
     }
 );

@@ -48,6 +48,36 @@
                 </div>
                 <!-- /.card -->
 
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">@lang('all.exited_appointments')</h5>
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @if (!$current_appointment->patient->previous_appointments || count($current_appointment->patient->previous_appointments) <= 0)
+                            <div class="alert alert-info m-l-10 m-r-10">
+                                <h6><i class="icon fas fa-info"></i> @lang('all.no_data')</h6>
+                            </div>
+                        @else
+                            @foreach ($current_appointment->patient->previous_appointments as $appointment)
+                                <div class="card card-primary  card-outline">
+                                    <div class="card-header">
+                                        <h5 class="card-title"><a
+                                                href="{{ route('appointments.show', $appointment) }}">{{ $appointment->type->name }}
+                                                - {{ $appointment->date }}</a></h5>
+
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="col-md-9">

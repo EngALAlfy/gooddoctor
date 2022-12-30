@@ -28,8 +28,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TestSeeder::class);
         $this->call(SettingSeeder::class);
         $this->call(AppointmentTypeSeeder::class);
-//        $this->call(PatientSeeder::class);
-//        $this->call(AppointmentSeeder::class);
+       $this->call(PatientSeeder::class);
+       $this->call(AppointmentSeeder::class);
         $this->call(DrugSeeder::class);
         $this->call(DiseaseSeeder::class);
     }

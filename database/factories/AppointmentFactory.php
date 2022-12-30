@@ -19,7 +19,7 @@ class AppointmentFactory extends Factory
     public function definition()
     {
         return [
-            'date' => Carbon::today(),
+            // 'date' => Carbon::today(),
             'user_id' => User::where('email' , 'admin')->first()->id,
             'appointment_type_id' => AppointmentType::inRandomOrder()->first()->id,
             'patient_id' => Patient::inRandomOrder()->first()->id,

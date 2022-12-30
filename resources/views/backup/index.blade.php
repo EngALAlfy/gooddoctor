@@ -1,4 +1,4 @@
-@extends('layout.auth')
+@extends('layout.blank')
 
 @section('title')
     @lang('all.backup')

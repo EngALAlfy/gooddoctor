@@ -40,6 +40,16 @@ class AppointmentController extends Controller
         return view('appointments.current');
     }
 
+    public function print(Appointment $appointment , $printable)
+    {
+        return view("prints.$printable" , compact('appointment' , 'printable'));
+    }
+
+    public function date($date)
+    {
+        return view('appointments.date' , compact('date'));
+    }
+
 
     /**
      * Display the specified resource.
@@ -63,17 +73,17 @@ class AppointmentController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdateAppointmentRequest  $request
-     * @param  \App\Models\Appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdateAppointmentRequest $request, Appointment $appointment)
-    {
-        //
-    }
+    // /**
+    //  * Update the specified resource in storage.
+    //  *
+    //  * @param  \App\Http\Requests\UpdateAppointmentRequest  $request
+    //  * @param  \App\Models\Appointment  $appointment
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function update(UpdateAppointmentRequest $request, Appointment $appointment)
+    // {
+    //     //
+    // }
 
     /**
      * Remove the specified resource from storage.

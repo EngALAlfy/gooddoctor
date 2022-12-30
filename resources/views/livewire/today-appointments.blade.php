@@ -100,24 +100,24 @@
                     </div>
 
                     <div class="card-footer">
-                        <button class="btn btn-app">
+                        <a target="_blank" href="{{route("print" , ["printable" => "order" , "appointment" => $current_appointment])}}" class="btn btn-app">
                             <i class="fa fa-sort-numeric-down"></i> @lang('all.print_order')
-                        </button>
-                        <button class="btn btn-app">
+                        </a>
+                        <a target="_blank" href="{{route("print" , ["printable" => "recipe" , "appointment" => $current_appointment])}}" class="btn btn-app">
                             <i class="fas ahi ahi-blister_pills_oval_x14"></i> @lang('all.print_recipe')
-                        </button>
-                        <button class="btn btn-app">
+                        </a>
+                        <a target="_blank" href="{{route("print" , ["printable" => "tests" , "appointment" => $current_appointment])}}" class="btn btn-app">
                             <i class="fas ahi ahi-microscope"></i>@lang('all.print_required_tests')
-                        </button>
-                        <button class="btn btn-app">
+                        </a>
+                        <a target="_blank" href="{{route("print" , ["printable" => "rays" , "appointment" => $current_appointment])}}" class="btn btn-app">
                             <i class="fas ahi ahi-xray"></i> @lang('all.print_required_rays')
-                        </button>
-                        <button class="btn btn-app">
+                        </a>
+                        <a  target="_blank" href="{{route("print" , ["printable" => "instructions" , "appointment" => $current_appointment])}}" class="btn btn-app">
                             <i class="fas ahi ahi-i_exam_multiple_choice"></i> @lang('all.print_instructions')
-                        </button>
-                        <button class="btn btn-app">
-                            <i class="fas ahi ahi-cardiogram"></i> @lang('all.print_info')
-                        </button>
+                        </a>
+{{--                        <button class="btn btn-app">--}}
+{{--                            <i class="fas ahi ahi-cardiogram"></i> @lang('all.print_info')--}}
+{{--                        </button>--}}
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -225,6 +225,7 @@
     @push('scripts')
         <script>
             document.addEventListener('livewire:load', function() {
+
                 $('.todo-list').sortable({
                     placeholder: 'sort-highlight',
                     handle: '.handle',
@@ -236,6 +237,12 @@
                 });
             });
         </script>
+
+{{--        <script>--}}
+{{--            function basicPopup(url) {--}}
+{{--                window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');--}}
+{{--            }--}}
+{{--        </script>--}}
     @endpush
 
 

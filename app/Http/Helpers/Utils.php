@@ -25,6 +25,12 @@ class Utils
 
         $roles = [];
 
+        // add some other roles
+        $roles[] = 'full_admin';
+        $roles[] = 'demo';
+        $roles[] = 'view_finance';
+        $roles[] = 'create_report';
+
         foreach ($models as $model) {
             if ($model == "patient_card") {
                 continue;

@@ -53,17 +53,17 @@ class Patient extends Model
 
     function next_appointments()
     {
-        return $this->hasMany(Appointment::class)->whereDate('created_at', '>', Carbon::today());
+        return $this->hasMany(Appointment::class)->whereDate('created_at', '>', Carbon::today())->latest();
     }
 
     function today_appointments()
     {
-        return $this->hasMany(Appointment::class)->whereDate('created_at', '=', Carbon::today());
+        return $this->hasMany(Appointment::class)->whereDate('created_at', '=', Carbon::today())->latest();
     }
 
     function previous_appointments()
     {
-        return $this->hasMany(Appointment::class)->whereDate('created_at', '<', Carbon::today());
+        return $this->hasMany(Appointment::class)->whereDate('created_at', '<', Carbon::today())->latest();
     }
 
     public function getSymptomsList()

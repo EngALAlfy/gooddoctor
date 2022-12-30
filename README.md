@@ -6,6 +6,7 @@
  * GoodDoctor can not be copied
  * and/or distributed without the express
  * permission of ALALFY
+
  ***********************************************/
 
 ###############################################
@@ -35,5 +36,6 @@
 ### To add an advantage or fix a defect as a result of misuse, an appropriate price is agreed upon between the two parties and an appropriate period for implementation and installation, and the price is added to the total license price
 
 ### Any violation of the above terms is considered a violation of the license of the program and any technical support or updates for the project are considered void.
+
 The user is not entitled to claim any material rights or recover any amounts paid
 
